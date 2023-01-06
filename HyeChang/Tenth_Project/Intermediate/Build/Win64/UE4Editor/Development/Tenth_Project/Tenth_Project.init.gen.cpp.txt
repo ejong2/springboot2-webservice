@@ -1,0 +1,3 @@
+C:\Work\Tenth_GItProject\HyeChang\Tenth_Project\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Project\Definitions.Tenth_Project.h
+C:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

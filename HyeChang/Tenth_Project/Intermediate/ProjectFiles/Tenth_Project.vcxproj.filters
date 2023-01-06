@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Tenth_Project.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{A3567203-6AE9-4520-B0A6-D9F5FF5EDDAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tenth_Project.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Tenth_ProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{6BFF6A70-B917-42B4-AD35-B538CF2FB49F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Tenth_Project">
+      <UniqueIdentifier>{C640CB59-DA34-4F44-85EB-3D9447B784FC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tenth_Project\Tenth_Project.Build.cs">
+      <Filter>Source\Tenth_Project</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Tenth_Project\Tenth_Project.cpp">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Project\Tenth_Project.h">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Project\Tenth_ProjectCharacter.cpp">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Project\Tenth_ProjectCharacter.h">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Project\Tenth_ProjectGameMode.cpp">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Project\Tenth_ProjectGameMode.h">
+      <Filter>Source\Tenth_Project</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
