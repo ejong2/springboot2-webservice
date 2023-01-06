@@ -1,0 +1,49 @@
+1/6(금) 실습 계획 정하기
+
+※ 매 주 화수목금 10시 ~ 17시
+
+※ TCP/IP를 응용한 Socket 서버 만들기 (UE와 Socket서버와 DB간 연결 및 통신)
+
+
+
+
+[면접 문제]
+
+
+1. 재귀함수를 이용한 연결리스트 삭제함수 작성
+
+typedef struct Node
+{
+    int data;
+    struct Node* Next;
+
+
+}    Node;
+
+void DeleteAll(Node* node);
+
+2. 코드를 보고 Setter Getter를 사용함으로써 얻을 수 있는 이점을 객체지향의 특성을 바탕으로 설명
+
+class monster
+{
+public:
+    monster(const string name);
+    void SetHealthPoint(int HealtPoint);
+
+private:
+    string mName;
+    int mHealthPoint;
+    int mMaxHealthPoint;
+};
+
+
+3. 문자열을 뒤집는 함수인 void Reverse string(char* str)를 작성하시오
+
+4. 명시적 캐스팅과 암시적 캐스팅에 대해 아는데로 설명하고 C++에는 어떤 캐스팅이 있는지 대략적으로 설명하시오
+
+5. C++클래스를 만들 때 컴파일러가 자동으로 만들어주는 함수들이 어떤게 있는지 설명하고 어떤 상황에서 컴파일러가 만들어주는 함수가 위험할지 설명하시오
+
+6. 부모클래스 A로부터 상속된 B,C,D가 있을 때, A의 소멸자에 virtual키워드를 왜 붙여야하는지 설명하시오.
+
+
+1/10(화)
