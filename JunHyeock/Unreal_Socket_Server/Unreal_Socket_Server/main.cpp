@@ -27,7 +27,6 @@ char Data[22] = { 0, };
 unsigned WINAPI WorkThread(void* Arg)
 {
 	SOCKET ClientSocket = *(SOCKET*)Arg;
-
 	while (true)
 	{
 		int RecvBytes = 0;
@@ -39,6 +38,8 @@ unsigned WINAPI WorkThread(void* Arg)
 			RecvBytes = recv(ClientSocket, &Data[TotalRecvBytes], sizeof(Data) - TotalRecvBytes, 0);
 			TotalRecvBytes += RecvBytes;
 		} while (TotalRecvBytes < sizeof(Data));
+
+		cout << "RecvBytes : " << RecvBytes << endl;
 
 		if (RecvBytes <= 0)
 		{
@@ -228,10 +229,10 @@ int main()
 		{
 			cout << "Player Id : " << Player.second->MySocket << ", ";
 		}
+		cout << endl;
 		LeaveCriticalSection(&ServerCS);
 
-
-		HANDLE ThreadHandle = reinterpret_cast<HANDLE>(_beginthreadex(nullptr, 0, WorkThread, static_cast<void*>(&NewClientSocket), 0, nullptr));
+			HANDLE ThreadHandle = (HANDLE)_beginthreadex(nullptr, 0, WorkThread, (void*)&NewClientSocket, 0, nullptr);
 
 
 

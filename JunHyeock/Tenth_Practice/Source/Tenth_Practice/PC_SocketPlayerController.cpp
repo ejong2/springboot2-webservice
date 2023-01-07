@@ -10,13 +10,20 @@ void APC_SocketPlayerController::BeginPlay()
 
 void APC_SocketPlayerController::Tick(float DeltaTime)
 {
+
+	if (Socket)
+	{
+		int32 SentBytes = 0;
+		int32 TotalSentBytes = 0;
+		Socket->Send(reinterpret_cast<const uint8*>(Data), 1, TotalSentBytes);
+	}
 }
 
 
 
 bool APC_SocketPlayerController::ConnectToServer()
 {
-	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
+
 
 	FString address = TEXT("127.0.0.1");
 	int32 port = 7476;

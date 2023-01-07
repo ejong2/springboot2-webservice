@@ -65,11 +65,14 @@ public:
 	//	2			8				4			4			4		
 	//Code		SocketID			X			Y			Z
 	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
-	char Data[22] = { 0, };
+	char Data[22] = { 1, };
 
 	TMap<FSocket*, PlayerData*> PlayerList;
 
 	FSocket* MySocketID = 0L;
+
+
+	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
 
 
 };
