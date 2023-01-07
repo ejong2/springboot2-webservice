@@ -72,7 +72,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Binaries\Win64\UE4Editor-Tenth_Practice.dll"
-/IMPLIB:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\UE4Editor-Tenth_Practice.suppressed.lib"
-/PDB:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Binaries\Win64\UE4Editor-Tenth_Practice.pdb"
+/OUT:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Binaries\Win64\UE4Editor-Tenth_Practice-0011.dll"
+/IMPLIB:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\UE4Editor-Tenth_Practice-0011.suppressed.lib"
+/PDB:"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Binaries\Win64\UE4Editor-Tenth_Practice-0011.pdb"
 /ignore:4078

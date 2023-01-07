@@ -80,6 +80,9 @@ F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Comm
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketReceiver.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketSender.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketBuilder.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\Utils.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Classes\Factories/Factory.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\Factory.generated.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Engine.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\CoreUObject.h

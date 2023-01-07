@@ -13,18 +13,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TENTH_PRACTICE_PC_SocketPlayerController_generated_h
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_SPARSE_DATA
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_RPC_WRAPPERS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_SPARSE_DATA
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execConnectToServer);
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execConnectToServer);
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_INCLASS_NO_PURE_DECLS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPC_SocketPlayerController(); \
 	friend struct Z_Construct_UClass_APC_SocketPlayerController_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(APC_SocketPlayerController)
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_INCLASS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_INCLASS \
 private: \
 	static void StaticRegisterNativesAPC_SocketPlayerController(); \
 	friend struct Z_Construct_UClass_APC_SocketPlayerController_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(APC_SocketPlayerController)
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_STANDARD_CONSTRUCTORS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APC_SocketPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APC_SocketPlayerController) \
@@ -55,7 +55,7 @@ private: \
 public:
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_ENHANCED_CONSTRUCTORS \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APC_SocketPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -68,28 +68,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APC_SocketPlayerController)
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_PRIVATE_PROPERTY_OFFSET
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_33_PROLOG
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_GENERATED_BODY_LEGACY \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_PRIVATE_PROPERTY_OFFSET
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_47_PROLOG
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_PRIVATE_PROPERTY_OFFSET \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_SPARSE_DATA \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_RPC_WRAPPERS \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_INCLASS \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_STANDARD_CONSTRUCTORS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_PRIVATE_PROPERTY_OFFSET \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_SPARSE_DATA \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_RPC_WRAPPERS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_INCLASS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_GENERATED_BODY \
+#define Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_PRIVATE_PROPERTY_OFFSET \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_SPARSE_DATA \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_INCLASS_NO_PURE_DECLS \
-	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_36_ENHANCED_CONSTRUCTORS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_PRIVATE_PROPERTY_OFFSET \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_SPARSE_DATA \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_INCLASS_NO_PURE_DECLS \
+	Tenth_Practice_Source_Tenth_Practice_PC_SocketPlayerController_h_50_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

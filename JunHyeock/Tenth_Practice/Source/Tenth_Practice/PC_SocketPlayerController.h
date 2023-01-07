@@ -3,12 +3,26 @@
 #pragma once
 
 #include <Networking/Public/Networking.h>
+#include <Utils.h>
 #include "CoreMinimal.h"
 #include "Engine.h"
 #include "Sockets.h"
 #include "SocketSubsystem.h"
 #include "GameFramework/PlayerController.h"
 #include "PC_SocketPlayerController.generated.h"
+
+
+
+class PlayerData
+{
+public:
+	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
+
+	int X = 0;
+	int Y = 0;
+	int Z = 0;
+
+};
 
 
 
@@ -39,14 +53,23 @@ public:
 
 	virtual void BeginPlay() override;
 
-
+	virtual void Tick(float DeltaTime) override;
+	
 
 	UFUNCTION(BlueprintCallable, Category = Socket)
 	bool ConnectToServer();
 
-	int X = 0;
-	int Y = 0;
-	int Z = 0;
+	void ProcessPacket(char* Pakcet);
+
+
+	//	2			8				4			4			4		
+	//Code		SocketID			X			Y			Z
+	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
+	char Data[22] = { 0, };
+
+	TMap<FSocket*, PlayerData*> PlayerList;
+
+	FSocket* MySocketID = 0L;
 
 
 };
