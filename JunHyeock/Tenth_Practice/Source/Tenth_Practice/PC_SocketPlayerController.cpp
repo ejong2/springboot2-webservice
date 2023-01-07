@@ -8,7 +8,9 @@ void APC_SocketPlayerController::BeginPlay()
 	ConnectToServer();
 }
 
-void APC_SocketPlayerController::ConnectToServer()
+
+
+bool APC_SocketPlayerController::ConnectToServer()
 {
 	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
 
@@ -21,17 +23,32 @@ void APC_SocketPlayerController::ConnectToServer()
 	addr->SetIp(GetTypeHash(ip));
 	addr->SetPort(port);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Trying to Connect")));
+	//Check Socket
+	if (Socket)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Trying to Connect ")));
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Socket could't be created")));
+
+		return false;
+	}
 
 	bool connected = Socket->Connect(*addr);
-	
+
+	//Check Connect
 	if (connected)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Connect Success")));
+
+		return true;
 	}
 	else
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Connect Failed")));
+
+		return false;
 	}
 
 }

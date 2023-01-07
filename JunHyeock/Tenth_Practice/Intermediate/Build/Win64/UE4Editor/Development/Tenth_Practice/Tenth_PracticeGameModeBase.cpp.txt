@@ -6,7 +6,7 @@ F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\Tenth_PracticeGameModeBase.generated.h
 C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice\PC_SocketPlayerController.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Engine.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking/Public/Networking.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Core.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
@@ -70,6 +70,22 @@ F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\UObject/Se
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\Sockets.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\SocketSubsystem.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\AddressInfoTypes.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4SubnetMask.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Address.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Endpoint.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Subnet.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/Steam/SteamEndpoint.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/INetworkingModule.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/TcpSocketBuilder.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/TcpListener.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketReceiver.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketSender.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketBuilder.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Engine.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\CoreUObject.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ErrorException.h
@@ -676,20 +692,4 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.3132
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\isa_availability.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Input/SSlider.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Framework/Docking/LayoutService.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking/Public/Networking.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\Sockets.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\SocketSubsystem.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Sockets\Public\AddressInfoTypes.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4SubnetMask.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Address.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Endpoint.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/IPv4/IPv4Subnet.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/Steam/SteamEndpoint.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Interfaces/INetworkingModule.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/TcpSocketBuilder.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/TcpListener.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketReceiver.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketSender.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Networking\Public\Common/UdpSocketBuilder.h
 C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\PC_SocketPlayerController.generated.h

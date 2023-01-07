@@ -1,0 +1,9 @@
+C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice/SocketPlayerData.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\GameProjectGeneration\Public\ClassTemplateEditorSubsystem.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\EditorSubsystem\Public\EditorSubsystem.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EditorSubsystem\EditorSubsystem.generated.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameProjectGeneration\ClassTemplateEditorSubsystem.generated.h
+C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\SocketPlayerData.generated.h

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tenth_Practice.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1C66015A-0CF8-4A6A-81F0-A5AAFB2DCC65}</UniqueIdentifier>
+      <UniqueIdentifier>{3552F57A-A7F8-428C-A7D7-9127C461D313}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tenth_Practice.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{876793F1-9619-44F6-B03D-C9033065C1D7}</UniqueIdentifier>
+      <UniqueIdentifier>{8ACA0D4B-9887-4FB0-B191-81238454798C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,12 +24,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tenth_Practice">
-      <UniqueIdentifier>{6991FB40-03AA-4226-974A-1C5BB811895E}</UniqueIdentifier>
+      <UniqueIdentifier>{D6E18EE5-5700-4AFE-B484-FB98AEECB344}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tenth_Practice\PC_SocketPlayerController.cpp">
       <Filter>Source\Tenth_Practice</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tenth_Practice\PC_SocketPlayerController.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Practice\SocketPlayerData.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\SocketPlayerData.h">
       <Filter>Source\Tenth_Practice</Filter>
     </ClInclude>
     <None Include="..\..\Source\Tenth_Practice\Tenth_Practice.Build.cs">

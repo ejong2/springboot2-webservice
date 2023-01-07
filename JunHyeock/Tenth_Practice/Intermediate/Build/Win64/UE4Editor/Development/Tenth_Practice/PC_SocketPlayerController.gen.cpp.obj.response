@@ -231,6 +231,11 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\GameProjectGeneration
+/I Editor\GameProjectGeneration\Classes
+/I Editor\GameProjectGeneration\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\HardwareTargeting
+/I Editor\HardwareTargeting\Public
 /I C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice
 /I C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source
 /I Runtime\Networking\Public
