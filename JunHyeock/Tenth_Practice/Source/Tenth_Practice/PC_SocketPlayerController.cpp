@@ -129,3 +129,8 @@ void APC_SocketPlayerController::ProcessPacket(char* Pakcet)
 
 
 }
+
+APC_SocketPlayerController::~APC_SocketPlayerController()
+{
+
+}

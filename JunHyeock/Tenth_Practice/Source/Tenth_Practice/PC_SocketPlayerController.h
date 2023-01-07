@@ -61,6 +61,8 @@ public:
 
 	void ProcessPacket(char* Pakcet);
 
+	virtual ~APC_SocketPlayerController() override;
+
 
 	//	2			8				4			4			4		
 	//Code		SocketID			X			Y			Z
