@@ -36,7 +36,7 @@ public: \
 
 #define Tenth_Practice_Source_Tenth_Practice_Tenth_PracticeGameModeBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ATenth_PracticeGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ATenth_PracticeGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATenth_PracticeGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATenth_PracticeGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATenth_PracticeGameModeBase); \
@@ -48,8 +48,6 @@ public:
 
 
 #define Tenth_Practice_Source_Tenth_Practice_Tenth_PracticeGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ATenth_PracticeGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATenth_PracticeGameModeBase(ATenth_PracticeGameModeBase&&); \
@@ -57,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATenth_PracticeGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATenth_PracticeGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATenth_PracticeGameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATenth_PracticeGameModeBase)
 
 
 #define Tenth_Practice_Source_Tenth_Practice_Tenth_PracticeGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET

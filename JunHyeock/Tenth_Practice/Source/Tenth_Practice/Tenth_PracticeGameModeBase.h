@@ -13,5 +13,10 @@ UCLASS()
 class TENTH_PRACTICE_API ATenth_PracticeGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	ATenth_PracticeGameModeBase();
+
+	virtual void BeginPlay() override;
+
 };
