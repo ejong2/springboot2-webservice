@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Tenth_Practice.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DD89D4AA-211A-4BCC-807E-CEA4A1D5472D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tenth_Practice.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Tenth_PracticeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{D8126AA2-6405-428A-957F-C8B5F485E199}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Tenth_Practice">
+      <UniqueIdentifier>{F5B30D0F-A771-436E-B38F-38F0D190571D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tenth_Practice\Tenth_Practice.Build.cs">
+      <Filter>Source\Tenth_Practice</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Tenth_Practice\Tenth_Practice.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\Tenth_Practice.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Practice\Tenth_PracticeGameModeBase.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\Tenth_PracticeGameModeBase.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
