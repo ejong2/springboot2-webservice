@@ -99,9 +99,9 @@ public:
 		return TEXT("PacketTask");
 	}
 
-	FORCEINLINE static TStatId GetStatID()
+	FORCEINLINE static TStatId GetStatId()
 	{
-		RETURN_QUICK_DECLARE_CYCLE_STAT(PacketTask, STATGROUP_TaskGraphTasks)
+		RETURN_QUICK_DECLARE_CYCLE_STAT(FVictoryTestTask, STATGROUP_TaskGraphTasks)
 	}
 
 	static ENamedThreads::Type GetDesiredThread()
@@ -114,11 +114,21 @@ public:
 		return ESubsequentsMode::TrackSubsequents;
 	}
 
+
+
+
 	void DoTask(ENamedThreads::Type currentThread, const FGraphEventRef& myCompletionGraphEvent)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Do Task"));
 
 
+	}
+
+
+	
+	void Excute_Thread()
+	{
+		MultiThread_CompletionEvents.Add(TGraphTask<PacketTask>::CreateTask(NULL, ENamedThreads::GameThread).ConstructAndDispatchWhenReady());
 	}
 
 	~PacketTask() {}
