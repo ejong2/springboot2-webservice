@@ -136,7 +136,44 @@ void APC_SocketPlayerController::ProcessPacket(char* Pakcet)
 
 }
 
+void APC_SocketPlayerController::RunPrimeTask()
+{
+	(new FAutoDeleteAsyncTask<PacketTask>())->StartBackgroundTask();
+}
+
+void APC_SocketPlayerController::RunPrimeTaskOnMain()
+{
+	PacketTask* task = new PacketTask();
+
+	task->DoWorkMain();
+
+	delete task;
+}
+
 APC_SocketPlayerController::~APC_SocketPlayerController()
+{
+
+}
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+
+
+
+
+
+
+void PacketTask::DoWork()
+{
+
+}
+
+void PacketTask::DoWorkMain()
 {
 
 }

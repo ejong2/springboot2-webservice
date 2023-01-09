@@ -61,6 +61,12 @@ public:
 
 	void ProcessPacket(char* Pakcet);
 
+
+	void RunPrimeTask();
+
+	void RunPrimeTaskOnMain();
+
+
 	virtual ~APC_SocketPlayerController() override;
 
 
@@ -99,9 +105,9 @@ public:
 		return TEXT("PacketTask");
 	}
 
-	FORCEINLINE static TStatId GetStatId()
+	FORCEINLINE TStatId GetStatId() const
 	{
-		RETURN_QUICK_DECLARE_CYCLE_STAT(FVictoryTestTask, STATGROUP_TaskGraphTasks)
+		RETURN_QUICK_DECLARE_CYCLE_STAT(PacketTask, STATGROUP_ThreadPoolAsyncTasks)
 	}
 
 	static ENamedThreads::Type GetDesiredThread()
@@ -114,22 +120,25 @@ public:
 		return ESubsequentsMode::TrackSubsequents;
 	}
 
+	void DoWork();
+
+	void DoWorkMain();
 
 
 
-	void DoTask(ENamedThreads::Type currentThread, const FGraphEventRef& myCompletionGraphEvent)
-	{
-		UE_LOG(LogTemp, Log, TEXT("Do Task"));
 
+	//void DoTask(ENamedThreads::Type currentThread, const FGraphEventRef& myCompletionGraphEvent)
+	//{
+	//	UE_LOG(LogTemp, Log, TEXT("Do Task"));
 
-	}
+	//}
 
 
 	
-	void Excute_Thread()
-	{
-		MultiThread_CompletionEvents.Add(TGraphTask<PacketTask>::CreateTask(NULL, ENamedThreads::GameThread).ConstructAndDispatchWhenReady());
-	}
+	//void Excute_Thread()
+	//{
+	//	MultiThread_CompletionEvents.Add(TGraphTask<PacketTask>::CreateTask(NULL, ENamedThreads::GameThread).ConstructAndDispatchWhenReady());
+	//}
 
 	~PacketTask() {}
 
