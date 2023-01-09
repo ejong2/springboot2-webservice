@@ -62,9 +62,9 @@ public:
 	void ProcessPacket(char* Pakcet);
 
 
-	void RunPrimeTask();
+	void RunPacketTask();
 
-	void RunPrimeTaskOnMain();
+	void RunPacketTaskOnMain();
 
 
 	virtual ~APC_SocketPlayerController() override;
@@ -73,7 +73,7 @@ public:
 	//	2			8				4			4			4		
 	//Code		SocketID			X			Y			Z
 	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
-	char Data[22] = { 1, };
+	char Data[22] = { 0, };
 
 	TMap<FSocket*, PlayerData*> PlayerList;
 
@@ -82,6 +82,7 @@ public:
 
 	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
 
+	class PacketTask* HandleTask;
 
 };
 
@@ -96,9 +97,14 @@ class PacketTask : public FNonAbandonableTask
 {
 
 public:
+	PacketTask()
+	{
+	}
 
-
-	PacketTask() {}
+	PacketTask(FSocket* socket)
+	{
+		ServerSocket = socket;
+	}
 
 	static const TCHAR* GetTaskName()
 	{
@@ -124,27 +130,34 @@ public:
 
 	void DoWorkMain();
 
-
+	void ProcessPacket(char* Pakcet);
 
 
 	//void DoTask(ENamedThreads::Type currentThread, const FGraphEventRef& myCompletionGraphEvent)
 	//{
 	//	UE_LOG(LogTemp, Log, TEXT("Do Task"));
-
 	//}
-
-
-	
+	// 
 	//void Excute_Thread()
 	//{
 	//	MultiThread_CompletionEvents.Add(TGraphTask<PacketTask>::CreateTask(NULL, ENamedThreads::GameThread).ConstructAndDispatchWhenReady());
 	//}
+	////Convenience typedef for a an array a graph events
+	//FGraphEventArray MultiThread_CompletionEvents;
 
-	~PacketTask() {}
+	
+
+
+	~PacketTask()
+	{}
 
 
 
-	//Convenience typedef for a an array a graph events
-	FGraphEventArray MultiThread_CompletionEvents;
+	FSocket* ServerSocket;
+
+	//	2			8				4			4			4		
+	//Code		SocketID			X			Y			Z
+	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
+	char Data[22] = { 0, };
 
 };
