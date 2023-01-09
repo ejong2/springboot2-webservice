@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <map>
+
 #include "Windows/AllowWindowsPlatformTypes.h"
 #include "Windows/prewindowsapi.h"
 
@@ -12,7 +12,7 @@
 #include "Windows/PostWindowsApi.h"
 #include "Windows/HideWindowsPlatformTypes.h"
 
-
+#include "ClientSocketObject.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "PC_SocketControllerWinVer.generated.h"
@@ -53,18 +53,12 @@ class TENTH_PRACTICE_API APC_SocketControllerWinVer : public APlayerController
 {
 	GENERATED_BODY()
 public:
+
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaTime) override;
 
-	void ConnectToServer();
-
-
 	virtual ~APC_SocketControllerWinVer() override;
-
-
-
-
 
 
 
@@ -74,27 +68,11 @@ public:
 	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
 	char Data[22] = { 0, };
 
-	SOCKET MySocketID = 0L;
+	
+
+
 };
 
 
 
 
-//============================================================================
-
-class TENTH_PRACTICE_API SocketThread : public FRunnable
-{
-public:
-	SocketThread();
-	~SocketThread() override;
-
-	bool Init() override;
-	uint32 Run() override;
-	void Exit() override;
-
-	SOCKET Socket;
-
-private:
-	FRunnableThread* Thread;
-
-};

@@ -49,9 +49,9 @@ unsigned WINAPI WorkThread(void* Arg)
 			ConnectPlayerList.erase(ConnectPlayerList.find(ClientSocket));
 			for (auto Player : ConnectPlayerList)
 			{
-				unsigned short Code = htons(static_cast<unsigned short>(MessagePacket::S2C_Destroy));
+				unsigned short Code = static_cast<unsigned short>(MessagePacket::S2C_Destroy);
 				memcpy(&Data[0], &Code, sizeof(Code));
-				SOCKET SendID = htonll(ClientSocket);
+				SOCKET SendID = ClientSocket;
 				memcpy(&Data[2], &SendID, sizeof(SendID));
 
 				int SentBytes = 0;
@@ -90,11 +90,11 @@ unsigned WINAPI WorkThread(void* Arg)
 				case MessagePacket::C2S_Move:
 				{
 					memcpy(&X, &Data[10], sizeof(X));
-					X = ntohl(X);
+					X = X;
 					memcpy(&Y, &Data[14], sizeof(Y));
-					X = ntohl(X);
+					Y = Y;
 					memcpy(&Z, &Data[18], sizeof(Z));
-					X = ntohl(Z);
+					Z = Z;
 
 					//update PlayerList
 					auto UpdatePlayer = ConnectPlayerList.find(FromID);
@@ -103,15 +103,15 @@ unsigned WINAPI WorkThread(void* Arg)
 					UpdatePlayer->second->Z = Z;
 
 					//parse
-					unsigned short Code = htons(static_cast<unsigned short>(MessagePacket::S2C_Move));
+					unsigned short Code = static_cast<unsigned short>(MessagePacket::S2C_Move);
 					memcpy(&Data[0], &Code, sizeof(Code));
-					SOCKET SendID = htonll(FromID);
+					SOCKET SendID = FromID;
 					memcpy(&Data[2], &SendID, sizeof(SendID));
-					int Temp = htonl(X);
+					int Temp = X;
 					memcpy(&Data[10], &Temp, sizeof(Temp));
-					Temp = htonl(Y);
+					Temp = Y;
 					memcpy(&Data[14], &Temp, sizeof(Temp));
-					Temp = htonl(Z);
+					Temp = Z;
 					memcpy(&Data[18], &Temp, sizeof(Temp));
 
 					//send
@@ -161,6 +161,8 @@ int main()
 
 	listen(ListenSocket, 0);
 
+
+
 	while (true)
 	{
 		//Connection
@@ -179,9 +181,11 @@ int main()
 		LeaveCriticalSection(&ServerCS);
 
 		//S2C_RegisterID
-		unsigned short Code = htons(static_cast<unsigned>(MessagePacket::S2C_RegisterID));
+		//unsigned short Code = htons(static_cast<unsigned short>(MessagePacket::S2C_RegisterID));
+		unsigned short Code = static_cast<unsigned short>(MessagePacket::S2C_RegisterID);
 		memcpy(&Data[0], &Code, sizeof(Code));
-		SOCKET SendID = htonll(NewClientSocket);
+		//SOCKET SendID = htonll(NewClientSocket);
+		SOCKET SendID = NewClientSocket;
 		memcpy(&Data[2], &SendID, sizeof(SendID));
 		int SentBytes = send(NewClientSocket, Data, sizeof(Data), 0);
 		cout << "MessagePacket::S2C_RegisterID " << endl;

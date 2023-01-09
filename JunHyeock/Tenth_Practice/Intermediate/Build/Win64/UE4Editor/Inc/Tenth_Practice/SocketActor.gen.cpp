@@ -13,81 +13,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSocketActor() {}
 // Cross Module References
-	TENTH_PRACTICE_API UEnum* Z_Construct_UEnum_Tenth_Practice_EMessagePacket();
-	UPackage* Z_Construct_UPackage__Script_Tenth_Practice();
 	TENTH_PRACTICE_API UClass* Z_Construct_UClass_ASocketActor_NoRegister();
 	TENTH_PRACTICE_API UClass* Z_Construct_UClass_ASocketActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	UPackage* Z_Construct_UPackage__Script_Tenth_Practice();
 // End Cross Module References
-	static UEnum* EMessagePacket_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_Tenth_Practice_EMessagePacket, Z_Construct_UPackage__Script_Tenth_Practice(), TEXT("EMessagePacket"));
-		}
-		return Singleton;
-	}
-	template<> TENTH_PRACTICE_API UEnum* StaticEnum<EMessagePacket>()
-	{
-		return EMessagePacket_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMessagePacket(EMessagePacket_StaticEnum, TEXT("/Script/Tenth_Practice"), TEXT("EMessagePacket"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Tenth_Practice_EMessagePacket_Hash() { return 3308867719U; }
-	UEnum* Z_Construct_UEnum_Tenth_Practice_EMessagePacket()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_Tenth_Practice();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EMessagePacket"), 0, Get_Z_Construct_UEnum_Tenth_Practice_EMessagePacket_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EMessagePacket::NoneEnum", (int64)EMessagePacket::NoneEnum },
-				{ "EMessagePacket::S2C_RegisterID", (int64)EMessagePacket::S2C_RegisterID },
-				{ "EMessagePacket::S2C_Spawn", (int64)EMessagePacket::S2C_Spawn },
-				{ "EMessagePacket::S2C_Destroy", (int64)EMessagePacket::S2C_Destroy },
-				{ "EMessagePacket::C2S_Move", (int64)EMessagePacket::C2S_Move },
-				{ "EMessagePacket::S2C_Move", (int64)EMessagePacket::S2C_Move },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "C2S_Move.DisPlayName", "C2S_Move" },
-				{ "C2S_Move.Name", "EMessagePacket::C2S_Move" },
-				{ "ModuleRelativePath", "SocketActor.h" },
-				{ "NoneEnum.Comment", "//Server To Client\n" },
-				{ "NoneEnum.Name", "EMessagePacket::NoneEnum" },
-				{ "NoneEnum.ToolTip", "Server To Client" },
-				{ "S2C_Destroy.DisPlayName", "S2C_Destroy" },
-				{ "S2C_Destroy.Name", "EMessagePacket::S2C_Destroy" },
-				{ "S2C_Move.DisPlayName", "S2C_Move" },
-				{ "S2C_Move.Name", "EMessagePacket::S2C_Move" },
-				{ "S2C_RegisterID.DisPlayName", "S2C_RegisterID" },
-				{ "S2C_RegisterID.Name", "EMessagePacket::S2C_RegisterID" },
-				{ "S2C_Spawn.DisPlayName", "S2C_Spawn" },
-				{ "S2C_Spawn.Name", "EMessagePacket::S2C_Spawn" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_Tenth_Practice,
-				nullptr,
-				"EMessagePacket",
-				"EMessagePacket",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 	void ASocketActor::StaticRegisterNativesASocketActor()
 	{
 	}
@@ -110,8 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeSocketActor() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASocketActor_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "//class PlayerData\n//{\n//public:\n//\n//\x09SOCKET Socket;\n//\x09int X = 0;\n//\x09int Y = 0;\n//\x09int Z = 0;\n//\n//};\n//\n//\n//UENUM(BlueprintType)\n//enum class EMessagePacket : uint8\n//{\n//\x09//Server To Client\n//\x09NoneEnum = 0,\n//\x09S2C_RegisterID = 10\x09UMETA(DisPlayName = \"S2C_RegisterID\"),\n//\x09S2C_Spawn = 20\x09UMETA(DisPlayName = \"S2C_Spawn\"),\n//\x09S2C_Destroy = 30\x09UMETA(DisPlayName = \"S2C_Destroy\"),\n//\x09""C2S_Move = 40\x09UMETA(DisPlayName = \"C2S_Move\"),\n//\x09S2C_Move = 50\x09UMETA(DisPlayName = \"S2C_Move\"),\n//\n//\n//};\n" },
 		{ "IncludePath", "SocketActor.h" },
 		{ "ModuleRelativePath", "SocketActor.h" },
+		{ "ToolTip", "class PlayerData\n{\npublic:\n\n       SOCKET Socket;\n       int X = 0;\n       int Y = 0;\n       int Z = 0;\n\n};\n\n\nUENUM(BlueprintType)\nenum class EMessagePacket : uint8\n{\n       Server To Client\n       NoneEnum = 0,\n       S2C_RegisterID = 10     UMETA(DisPlayName = \"S2C_RegisterID\"),\n       S2C_Spawn = 20  UMETA(DisPlayName = \"S2C_Spawn\"),\n       S2C_Destroy = 30        UMETA(DisPlayName = \"S2C_Destroy\"),\n       C2S_Move = 40   UMETA(DisPlayName = \"C2S_Move\"),\n       S2C_Move = 50   UMETA(DisPlayName = \"S2C_Move\"),\n\n\n};" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASocketActor_Statics::StaticCppClassTypeInfo = {
@@ -141,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSocketActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASocketActor, 132906912);
+	IMPLEMENT_CLASS(ASocketActor, 1639554960);
 	template<> TENTH_PRACTICE_API UClass* StaticClass<ASocketActor>()
 	{
 		return ASocketActor::StaticClass();

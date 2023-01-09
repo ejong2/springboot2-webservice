@@ -59,7 +59,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Socket)
 	bool ConnectToServer();
 
-	void ProcessPacket(char* Pakcet);
+	//void ProcessPacket(char* Pakcet);
 
 
 	void RunPacketTask();

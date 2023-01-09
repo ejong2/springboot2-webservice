@@ -90,15 +90,4 @@ template<> TENTH_PRACTICE_API UClass* StaticClass<class ASocketActor>();
 #define CURRENT_FILE_ID Tenth_Practice_Source_Tenth_Practice_SocketActor_h
 
 
-#define FOREACH_ENUM_EMESSAGEPACKET(op) \
-	op(EMessagePacket::NoneEnum) \
-	op(EMessagePacket::S2C_RegisterID) \
-	op(EMessagePacket::S2C_Spawn) \
-	op(EMessagePacket::S2C_Destroy) \
-	op(EMessagePacket::C2S_Move) \
-	op(EMessagePacket::S2C_Move) 
-
-enum class EMessagePacket : uint8;
-template<> TENTH_PRACTICE_API UEnum* StaticEnum<EMessagePacket>();
-
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
