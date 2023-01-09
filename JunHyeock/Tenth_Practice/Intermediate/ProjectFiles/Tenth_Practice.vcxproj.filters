@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Tenth_Practice.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{3552F57A-A7F8-428C-A7D7-9127C461D313}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tenth_Practice.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Tenth_PracticeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{8ACA0D4B-9887-4FB0-B191-81238454798C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Tenth_Practice">
+      <UniqueIdentifier>{D6E18EE5-5700-4AFE-B484-FB98AEECB344}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Tenth_Practice\PC_SocketPlayerController.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\PC_SocketPlayerController.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Practice\SocketPlayerData.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\SocketPlayerData.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Tenth_Practice\Tenth_Practice.Build.cs">
+      <Filter>Source\Tenth_Practice</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Tenth_Practice\Tenth_Practice.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\Tenth_Practice.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_Practice\Tenth_PracticeGameModeBase.cpp">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_Practice\Tenth_PracticeGameModeBase.h">
+      <Filter>Source\Tenth_Practice</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
