@@ -13,32 +13,32 @@
 
 
 
-class PlayerData
-{
-public:
-	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
-
-	int X = 0;
-	int Y = 0;
-	int Z = 0;
-
-};
-
-
-
-UENUM(BlueprintType)
-enum class EMessagePacket : uint8
-{
-	//Server To Cleint
-	NoneEnum			=	 0,
-	S2C_RegisterID		=	 10	UMETA(DisPlayName = "S2C_RegisterID"),
-	S2C_Spawn			=	 20	UMETA(DisPlayName = "S2C_Spawn"),
-	S2C_Destroy			=	 30	UMETA(DisPlayName = "S2C_Destroy"),
-	C2S_Move			=	 40	UMETA(DisPlayName = "C2S_Move"),
-	S2C_Move			=	 50	UMETA(DisPlayName = "S2C_Move"),
-
-
-};
+//class PlayerData
+//{
+//public:
+//	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
+//
+//	int X = 0;
+//	int Y = 0;
+//	int Z = 0;
+//
+//};
+//
+//
+//
+//UENUM(BlueprintType)
+//enum class EMessagePacket : uint8
+//{
+//	//Server To Cleint
+//	NoneEnum			=	 0,
+//	S2C_RegisterID		=	 10	UMETA(DisPlayName = "S2C_RegisterID"),
+//	S2C_Spawn			=	 20	UMETA(DisPlayName = "S2C_Spawn"),
+//	S2C_Destroy			=	 30	UMETA(DisPlayName = "S2C_Destroy"),
+//	C2S_Move			=	 40	UMETA(DisPlayName = "C2S_Move"),
+//	S2C_Move			=	 50	UMETA(DisPlayName = "S2C_Move"),
+//
+//
+//};
 
 
 /**
@@ -75,7 +75,7 @@ public:
 	//[][]	[][][][][][][][]	[][][][]	[][][][]	[][][][]
 	char Data[22] = { 0, };
 
-	TMap<FSocket*, PlayerData*> PlayerList;
+	//TMap<FSocket*, PlayerData*> PlayerList;
 
 	FSocket* MySocketID = 0L;
 
