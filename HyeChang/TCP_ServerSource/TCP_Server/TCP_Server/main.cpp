@@ -12,6 +12,8 @@
 
 #include <Windows.h>
 
+#include "MessagePacket.h"
+
 #include "jdbc/mysql_connection.h"
 #include "jdbc/cppconn/driver.h"
 #include "jdbc/cppconn/exception.h"
@@ -21,8 +23,10 @@
 #pragma comment (lib, "mysqlcppconn.lib")
 
 #define PORT 19934
-#define IP_ADDRESS "172.16.2.84"
+#define IP_ADDRESS "127.0.0.1"
 #define PACKET_SIZE 100
+
+const int NET_PACKET_SIZE = 512;
 
 using namespace std;
 
@@ -40,155 +44,42 @@ sql::Statement* stmt = nullptr;
 sql::PreparedStatement* pstmt = nullptr;
 sql::ResultSet* rs = nullptr;
 
-std::string Utf8ToMultiByte(std::string utf8_str)
+int ProcessPacket(SOCKET CS, char* Buffer)
 {
-    std::string resultString; char* pszIn = new char[utf8_str.length() + 1];
-    strncpy_s(pszIn, utf8_str.length() + 1, utf8_str.c_str(), utf8_str.length());
-    int nLenOfUni = 0, nLenOfANSI = 0; wchar_t* uni_wchar = NULL;
-    char* pszOut = NULL;
-    // 1. utf8 Length
-    if ((nLenOfUni = MultiByteToWideChar(CP_UTF8, 0, pszIn, (int)strlen(pszIn), NULL, 0)) <= 0)
-        return nullptr;
-    uni_wchar = new wchar_t[nLenOfUni + 1];
-    memset(uni_wchar, 0x00, sizeof(wchar_t) * (nLenOfUni + 1));
-    // 2. utf8 --> unicode
-    nLenOfUni = MultiByteToWideChar(CP_UTF8, 0, pszIn, (int)strlen(pszIn), uni_wchar, nLenOfUni);
-    // 3. ANSI(multibyte) Length
-    if ((nLenOfANSI = WideCharToMultiByte(CP_ACP, 0, uni_wchar, nLenOfUni, NULL, 0, NULL, NULL)) <= 0)
-    {
-        delete[] uni_wchar; return 0;
-    }
-    pszOut = new char[nLenOfANSI + 1];
-    memset(pszOut, 0x00, sizeof(char) * (nLenOfANSI + 1));
-    // 4. unicode --> ANSI(multibyte)
-    nLenOfANSI = WideCharToMultiByte(CP_ACP, 0, uni_wchar, nLenOfUni, pszOut, nLenOfANSI, NULL, NULL);
-    pszOut[nLenOfANSI] = 0;
-    resultString = pszOut;
-    delete[] uni_wchar;
-    delete[] pszOut;
-    return resultString;
-}
+    int Retval = 1;
 
-size_t UTF8StringByteCount(const std::string& str)
-{
-    size_t utf8_char_count = 0;
-    for (int i = 0; i < str.length();)
-    {
-        // 4바이트 문자인지 확인
-        // 0xF0 = 1111 0000
-        if (0xF0 == (0xF0 & str[i]))
-        {
-            // 나머지 3바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]) || 0x80 != (0x80 & str[i + 2]) || 0x80 != (0x80 & str[i + 3]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 4;
-            utf8_char_count += 4;
-            continue;
-        }
-        // 3바이트 문자인지 확인
-        // 0xE0 = 1110 0000
-        else if (0xE0 == (0xE0 & str[i]))
-        {
-            // 나머지 2바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]) || 0x80 != (0x80 & str[i + 2]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 3;
-            utf8_char_count += 3;
-            continue;
-        }
-        // 2바이트 문자인지 확인
-        // 0xC0 = 1100 0000
-        else if (0xC0 == (0xC0 & str[i]))
-        {
-            // 나머지 1바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 2;
-            utf8_char_count += 2;
-            continue;
-        }
-        // 최상위 비트가 0인지 확인
-        else if (0 == (str[i] >> 7))
-        {
-            i += 1;
-            utf8_char_count += 1;
-        }
-        else
-        {
-            throw std::exception("not utf-8 encoded string");
-        }
-    }
-    return utf8_char_count;
-}
+    char Packet[NET_PACKET_SIZE] = { 0, };
+    memcpy(Packet, Buffer, sizeof(Packet));
+    MessageHeader MsgHead = { 0, };
+    memcpy(&MsgHead, Packet, sizeof(MsgHead));
 
-size_t UTF8StringLength(const std::string& str)
-{
-    size_t utf8_char_count = 0;
-    for (int i = 0; i < str.length();)
+    switch ((EMessageID)MsgHead.MessageID)
     {
-        // 4바이트 문자인지 확인
-        // 0xF0 = 1111 0000
-        if (0xF0 == (0xF0 & str[i]))
+        case EMessageID::C2S_ProcessPacket_1:
         {
-            // 나머지 3바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]) || 0x80 != (0x80 & str[i + 2]) || 0x80 != (0x80 & str[i + 3]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 4;
-            utf8_char_count++;
-            continue;
+            cout << "11001" << '\n';
+            break;
         }
-        // 3바이트 문자인지 확인
-        // 0xE0 = 1110 0000
-        else if (0xE0 == (0xE0 & str[i]))
+        case EMessageID::C2S_ProcessPacket_2:
         {
-            // 나머지 2바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]) || 0x80 != (0x80 & str[i + 2]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 3;
-            utf8_char_count++;
-            continue;
+            cout << "11002" << '\n';
+            break;
         }
-        // 2바이트 문자인지 확인
-        // 0xC0 = 1100 0000
-        else if (0xC0 == (0xC0 & str[i]))
+        case EMessageID::C2S_ProcessPacket_3:
         {
-            // 나머지 1바이트 확인
-            // 0x80 = 1000 0000
-            if (0x80 != (0x80 & str[i + 1]))
-            {
-                throw std::exception("not utf-8 encoded string");
-            }
-            i += 2;
-            utf8_char_count++;
-            continue;
+            cout << "11003" << '\n';
+            break;
         }
-        // 최상위 비트가 0인지 확인
-        else if (0 == (str[i] >> 7))
+        case EMessageID::C2S_ProcessPacket_4:
         {
-            i += 1;
-            utf8_char_count++;
+            cout << "11004" << '\n';
+            break;
         }
-        else
-        {
-            throw std::exception("not utf-8 encoded string");
-        }
+
+        default:
+            break;
     }
-    return utf8_char_count;
+    return Retval;
 }
 
 unsigned WINAPI WorkThread(void* Args)
@@ -199,57 +90,12 @@ unsigned WINAPI WorkThread(void* Args)
     {
         char Buffer[PACKET_SIZE] = { 0, };
         int RecvBytes = recv(CS, Buffer, sizeof(Buffer), 0);
+        if (RecvBytes <= 0) { break; }
+        int Retval = ProcessPacket(CS, &Buffer[0]);
 
-        if (RecvBytes <= 0)
-        {
-            cout << "클라이언트 연결 종료 : " << CS << '\n';
-            closesocket(CS);
-            EnterCriticalSection(&ServerCS);
-            vSocketList.erase(find(vSocketList.begin(), vSocketList.end(), CS));
-            LeaveCriticalSection(&ServerCS);
-            break;
-        }
-        Buffer[PACKET_SIZE - 1] = '\0';
 
-        std::string ChatBuffer = Buffer;
+        cout << Buffer[0] << '\n';
 
-        //size_t szChatMsgLen = UTF8StringLength(ChatBuffer);
-        //size_t szChatMsgByteLength = UTF8StringByteCount(ChatBuffer);
-        //
-        //if (szChatMsgLen > 20)
-        //{
-        //    ChatBuffer = ChatBuffer.substr(0, 20);
-        //}
-
-        pstmt = con->prepareStatement("INSERT INTO ChatTable(`CONTENTS`)VALUES(?)");
-        pstmt->setString(1, ChatBuffer);
-        pstmt->execute();
-
-        cout << Utf8ToMultiByte(ChatBuffer) << '\n';
-        //cout << "RecvBytes : " << RecvBytes << '\n';
-
-        EnterCriticalSection(&ServerCS);
-        for (int i = 0; i < vSocketList.size(); i++)
-        {
-            int SendBytes = 0;
-            int TotalSentBytes = 0;
-            do
-            {
-                SendBytes = send(vSocketList[i], &Buffer[TotalSentBytes], sizeof(Buffer) - TotalSentBytes, 0);
-                TotalSentBytes += SendBytes;
-            } while (TotalSentBytes < sizeof(Buffer));
-
-            if (SendBytes <= 0)
-            {
-                closesocket(CS);
-                EnterCriticalSection(&ServerCS);
-                vSocketList.erase(find(vSocketList.begin(), vSocketList.end(), CS));
-                LeaveCriticalSection(&ServerCS);
-                break;
-            }
-
-            LeaveCriticalSection(&ServerCS);
-        }
     }
     return 0;
 }
