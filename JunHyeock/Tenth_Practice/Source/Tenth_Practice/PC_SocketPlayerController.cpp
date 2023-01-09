@@ -5,18 +5,22 @@
 
 void APC_SocketPlayerController::BeginPlay()
 {
+	Super::BeginPlay();
+
 	ConnectToServer();
 }
 
 void APC_SocketPlayerController::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
 
-	if (Socket)
-	{
-		int32 SentBytes = 0;
-		int32 TotalSentBytes = 0;
-		Socket->Send(reinterpret_cast<const uint8*>(Data), 1, TotalSentBytes);
-	}
+	//if (Socket)
+	//{
+	//	int32 SentBytes = 0;
+	//	int32 TotalSentBytes = 0;
+	//	Socket->Send(reinterpret_cast<const uint8*>(Data), 1, TotalSentBytes);
+	//}
+
 }
 
 
@@ -72,6 +76,8 @@ void APC_SocketPlayerController::ProcessPacket(char* Pakcet)
 	FSocket* FromID = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);
 	memcpy(FromID, &Data[2], sizeof(FromID));
 	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("PacketRecv")));
+
 	//Code = ntohs(Code)
 	//FormID = ntohll(FromID)
 	PlayerData* NewPlayer = nullptr;
@@ -84,7 +90,7 @@ void APC_SocketPlayerController::ProcessPacket(char* Pakcet)
 		MySocketID = FromID;
 		PlayerList[FromID] = NewPlayer;
 
-				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("S2C_RegisterID")));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("S2C_RegisterID")));
 
 		break;
 	case EMessagePacket::S2C_Spawn:

@@ -78,3 +78,54 @@ public:
 
 
 };
+
+
+
+//-------------------------------------------------------------------------------------
+
+
+
+
+class PacketTask : public FNonAbandonableTask
+{
+
+public:
+
+
+	PacketTask() {}
+
+	static const TCHAR* GetTaskName()
+	{
+		return TEXT("PacketTask");
+	}
+
+	FORCEINLINE static TStatId GetStatID()
+	{
+		RETURN_QUICK_DECLARE_CYCLE_STAT(PacketTask, STATGROUP_TaskGraphTasks)
+	}
+
+	static ENamedThreads::Type GetDesiredThread()
+	{
+		return ENamedThreads::AnyThread;
+	}
+
+	static ESubsequentsMode::Type GetSubsequentsMode()
+	{
+		return ESubsequentsMode::TrackSubsequents;
+	}
+
+	void DoTask(ENamedThreads::Type currentThread, const FGraphEventRef& myCompletionGraphEvent)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Do Task"));
+
+
+	}
+
+	~PacketTask() {}
+
+
+
+	//Convenience typedef for a an array a graph events
+	FGraphEventArray MultiThread_CompletionEvents;
+
+};
