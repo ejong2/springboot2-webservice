@@ -90,7 +90,11 @@ unsigned WINAPI WorkThread(void* Args)
     {
         char Buffer[PACKET_SIZE] = { 0, };
         int RecvBytes = recv(CS, Buffer, sizeof(Buffer), 0);
-        if (RecvBytes <= 0) { break; }
+        if (RecvBytes <= 0)
+        {
+            cout << "클라이언트 연결 종료 : " << CS << '\n';
+            break; 
+        }
         int Retval = ProcessPacket(CS, &Buffer[0]);
 
 
