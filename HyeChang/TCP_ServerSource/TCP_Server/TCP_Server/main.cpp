@@ -56,33 +56,12 @@ int main()
 					FD_SET(CS, &Reads);
 					cout << "CONNECT : " << CS << '\n';
 
-					while (true)
-					{
-						Sleep(1000);
-						int SendBytes = send(CS, MoveBuffer, sizeof(MoveBuffer), 0);
-
-						char RecvBuffer[] = { 0, };
-						int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
-
-						if (RecvBytes)
-						{
-							break;
-						}
-					}
+					int SendBytes = send(CS, MoveBuffer, sizeof(MoveBuffer), 0);
 				}
 				else
 				{
 					char RecvBuffer[] = { 0, };
 					int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
-
-					//cout << RecvBuffer << '\n';
-					//if (RecvBuffer == "EndBuffer");
-					//{
-					//	cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
-					//	SOCKET DS = Reads.fd_array[i];
-					//	FD_CLR(DS, &Reads);
-					//	closesocket(DS);
-					//}
 					if (RecvBytes <= 0 || RecvBuffer == "EndBuffer")
 					{
 						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
