@@ -1,12 +1,15 @@
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice\PC_SocketControllerWinVer.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Development\Tenth_TCPConnect_One\Definitions.Tenth_TCPConnect_One.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Source\Tenth_TCPConnect_One/PC_SocketPC.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Source\Tenth_TCPConnect_One\SocketThreadClass.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\Windows.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\sdkddkver.h
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\excpt.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\excpt.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\windef.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\minwindef.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winnt.h
@@ -100,25 +103,12 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\wnnc.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\stralign.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\imm.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\ime_cmodes.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/prewindowsapi.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/prewindowsapi.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\WinSock2.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\ws2def.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\inaddr.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\qos.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice\ClientSocketObject.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/prewindowsapi.h
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\map
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\xtree
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\xmemory
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\limits
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\cfloat
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\cwchar
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\cstdio
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE\isa_availability.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\PC_SocketControllerWinVer.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One\PC_SocketPC.generated.h

@@ -62,7 +62,6 @@ unsigned WINAPI WorkThread(void* Arg)
 					SentBytes = send(Player.second->MySocket, &Data[TotalSentBytes], sizeof(Data) - TotalSentBytes, 0);
 					TotalSentBytes += SentBytes;
 				} while (TotalSentBytes < sizeof(Data));
-
 			}
 			LeaveCriticalSection(&ServerCS);
 
@@ -198,9 +197,9 @@ int main()
 			//S2CSpawn
 			if (Player.first != NewClientSocket)
 			{
-				unsigned short Code = htons(static_cast<unsigned short>(MessagePacket::S2C_Spawn));
+				unsigned short Code = static_cast<unsigned short>(MessagePacket::S2C_Spawn);
 				memcpy(&Data[0], &Code, sizeof(Code));
-				SOCKET SpawnID = htonll(NewClientSocket);
+				SOCKET SpawnID = NewClientSocket;
 				memcpy(&Data[2], &SpawnID, sizeof(SpawnID));
 
 				//packet
@@ -211,6 +210,7 @@ int main()
 					SentBytes = send(Player.second->MySocket, &Data[TotalSentBytes], sizeof(Data) - TotalSentBytes, 0);
 					TotalSentBytes += SentBytes;
 				} while (TotalSentBytes < sizeof(Data));
+				cout << "MessagePacket::SpawnID " << endl;
 			}
 		}
 
@@ -220,11 +220,12 @@ int main()
 			if (Player.first != NewClientSocket)
 			{
 				//S2CSpawn
-				unsigned short Code = htons(static_cast<unsigned short>(MessagePacket::S2C_Spawn));
+				unsigned short Code = static_cast<unsigned short>(MessagePacket::S2C_Spawn);
 				memcpy(&Data[0], &Code, sizeof(Code));
-				SOCKET SpawnID = htonll(Player.second->MySocket);
+				SOCKET SpawnID = Player.second->MySocket;
 				memcpy(&Data[2], &SpawnID, sizeof(SpawnID));
 				send(NewClientSocket, Data, sizeof(Data), 0);
+				cout << "MessagePacket::S2C_Spawn" << endl;
 		 	}
 		}
 

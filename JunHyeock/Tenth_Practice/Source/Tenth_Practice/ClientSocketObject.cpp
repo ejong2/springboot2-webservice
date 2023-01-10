@@ -2,6 +2,8 @@
 
 
 #include "ClientSocketObject.h"
+#include "Kismet/GameplayStatics.h"
+#include "PC_SocketControllerWinVer.h"
 
 ClientSocketObject::ClientSocketObject()
 {
@@ -108,12 +110,23 @@ void ClientSocketObject::ProcessPacket(char* Data)
 	switch (EMessagePacket(Code))
 	{
 	case EMessagePacket::S2C_RegisterID:
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("RegisterID")));
 
-		//NewPlayer = new PlayerData();
-		//NewPlayer->MySocket = FromID;
-		//MySocketID = FromID;
-		//PlayerList[FromID] = NewPlayer;
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("RegisterID")));
+			NewPlayer = new PlayerData();
+			if (NewPlayer)
+			{
+				NewPlayer->MySocket = FromID;
+				MySocketID = FromID;
+				PlayerList.Add(FromID, NewPlayer);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("FromID : %d"), FromID));
+				if (PlayerList.Find(FromID))
+				{
+					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("FindSucess")));
+				}
+				
+			}
+
 
 		break;
 	case EMessagePacket::S2C_Spawn:
@@ -204,3 +217,5 @@ void ClientSocketObject::MoveProcess(int Input)
 	}
 	
 }
+
+

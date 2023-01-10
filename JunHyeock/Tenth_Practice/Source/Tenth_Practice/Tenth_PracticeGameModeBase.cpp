@@ -9,7 +9,7 @@
 ATenth_PracticeGameModeBase::ATenth_PracticeGameModeBase()
 {
 	PlayerControllerClass = APC_SocketControllerWinVer::StaticClass();
-	DefaultPawnClass = ASocketPawn::StaticClass();
+	//DefaultPawnClass = ASocketPawn::StaticClass();
 }
 
 void ATenth_PracticeGameModeBase::BeginPlay()

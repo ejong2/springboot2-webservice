@@ -62,6 +62,8 @@ public:
 
 	void MoveProcess(int Input);
 
+	
+
 
 
 public:
@@ -74,6 +76,7 @@ public:
 	TMap<SOCKET, PlayerData*> PlayerList;
 
 	PlayerData* NewPlayer = nullptr;
+
 
 	//	2			8				4			4			4		
 	//Code		SocketID			X			Y			Z
