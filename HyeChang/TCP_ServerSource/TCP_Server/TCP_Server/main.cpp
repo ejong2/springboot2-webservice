@@ -1,18 +1,7 @@
-// 채팅 서버
-
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 
 
 #include <iostream>
-#include <stdlib.h>
-
 #include <WinSock2.h>
-#include <process.h>
-#include <vector>
-#include <string>
-
-#include <Windows.h>
-
-#include "MessagePacket.h"
 
 #include "jdbc/mysql_connection.h"
 #include "jdbc/cppconn/driver.h"
@@ -22,21 +11,11 @@
 #pragma comment(lib, "WS2_32.lib")
 #pragma comment (lib, "mysqlcppconn.lib")
 
-#define PORT 19934
-#define IP_ADDRESS "127.0.0.1"
-#define PACKET_SIZE 100
-
-const int NET_PACKET_SIZE = 512;
-
 using namespace std;
 
 const string server = "tcp://127.0.0.1:3306";
 const string username = "root";
 const string password = "1234";
-
-vector<SOCKET> vSocketList;
-
-CRITICAL_SECTION ServerCS;
 
 sql::Driver* driver = nullptr;
 sql::Connection* con = nullptr;
@@ -44,106 +23,107 @@ sql::Statement* stmt = nullptr;
 sql::PreparedStatement* pstmt = nullptr;
 sql::ResultSet* rs = nullptr;
 
-int ProcessPacket(SOCKET CS, char* Buffer)
+SOCKET CS;
+
+void LoginProcess(SOCKET ClientSocket)
 {
-    int Retval = 1;
+	cout << "LoginProcess 함수 실행" << '\n';
 
-    char Packet[NET_PACKET_SIZE] = { 0, };
-    memcpy(Packet, Buffer, sizeof(Packet));
-    MessageHeader MsgHead = { 0, };
-    memcpy(&MsgHead, Packet, sizeof(MsgHead));
+	char IdBuffer[60] = { 0, };
+	char PwdBuffer[60] = { 0, };
 
-    switch ((EMessageID)MsgHead.MessageID)
-    {
-        case EMessageID::C2S_ProcessPacket_1:
-        {
-            cout << "11001" << '\n';
-            break;
-        }
-        case EMessageID::C2S_ProcessPacket_2:
-        {
-            cout << "11002" << '\n';
-            break;
-        }
-        case EMessageID::C2S_ProcessPacket_3:
-        {
-            cout << "11003" << '\n';
-            break;
-        }
-        case EMessageID::C2S_ProcessPacket_4:
-        {
-            cout << "11004" << '\n';
-            break;
-        }
+	int RecvBytes = recv(CS, IdBuffer, sizeof(IdBuffer), 0);
+	string strID = IdBuffer;
 
-        default:
-            break;
-    }
-    return Retval;
-}
+	RecvBytes = recv(CS, PwdBuffer, sizeof(PwdBuffer), 0);
+	string strPWD = PwdBuffer;
 
-unsigned WINAPI WorkThread(void* Args)
-{
-    SOCKET CS = *(SOCKET*)Args;
-
-    while (true)
-    {
-        char Buffer[PACKET_SIZE] = { 0, };
-        int RecvBytes = recv(CS, Buffer, sizeof(Buffer), 0);
-        if (RecvBytes <= 0)
-        {
-            cout << "클라이언트 연결 종료 : " << CS << '\n';
-            break; 
-        }
-        int Retval = ProcessPacket(CS, &Buffer[0]);
-
-
-        cout << Buffer[0] << '\n';
-
-    }
-    return 0;
+	pstmt = con->prepareStatement("INSERT INTO PlayerTable(`ID`,`PWD`) VALUES(?, ?)");
+	pstmt->setString(1, strID);
+	pstmt->setString(2, strPWD);
+	pstmt->execute();
 }
 
 int main()
 {
-    driver = get_driver_instance();
-    con = driver->connect(server, username, password);
-    con->setSchema("UE4SERVER");
+	driver = get_driver_instance();
+	con = driver->connect(server, username, password);
+	con->setSchema("UE4SERVER");
 
-    cout << "[채팅 서버 활성화]" << '\n';
+	WSADATA WSAData;
+	WSAStartup(MAKEWORD(2, 2), &WSAData);
+	SOCKET LS = socket(AF_INET, SOCK_STREAM, 0);
 
-    InitializeCriticalSection(&ServerCS);
+	SOCKADDR_IN LA;
+	memset(&LA, 0, sizeof(LA));
+	LA.sin_family = AF_INET;
+	LA.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	LA.sin_port = htons(19934);
 
-    WSADATA WSAData;
-    WSAStartup(MAKEWORD(2, 2), &WSAData);
-    SOCKET SS = socket(AF_INET, SOCK_STREAM, 0);
+	bind(LS, (SOCKADDR*)&LA, sizeof(LA));
+	listen(LS, 0);
 
-    SOCKADDR_IN SA = { 0, };
-    SA.sin_family = AF_INET;
-    SA.sin_addr.S_un.S_addr = inet_addr(IP_ADDRESS);
-    SA.sin_port = htons(PORT);
+	cout << "클라이언트를 기다리는 중입니다....." << '\n';
 
-    if (::bind(SS, (SOCKADDR*)&SA, sizeof(SA)) != 0) { exit(-3); };
-    if (listen(SS, SOMAXCONN) == SOCKET_ERROR) { exit(-4); };
+	fd_set Reads;
+	fd_set Copys;
+	FD_ZERO(&Reads);
 
-    cout << "클라이언트 연결을 기다리는 중입니다......." << '\n';
+	FD_SET(LS, &Reads);
 
-    while (true)
-    {
-        SOCKADDR_IN CA = { 0, };
-        int sizeCA = sizeof(CA);
-        SOCKET CS = accept(SS, (SOCKADDR*)&CA, &sizeCA);
+	TIMEVAL TimeOut;
+	TimeOut.tv_sec = 1;
+	TimeOut.tv_usec = 10;
 
-        cout << "클라이언트 접속 : " << CS << '\n';
+	char MoveBuffer[1024] = "Move";
 
-        EnterCriticalSection(&ServerCS);
-        vSocketList.push_back(CS);
-        LeaveCriticalSection(&ServerCS);
+	while (true)
+	{
+		Copys = Reads;
 
-        HANDLE hThread = (HANDLE)_beginthreadex(0, 0, WorkThread, (void*)&CS, 0, 0);
-    }
-    closesocket(SS);
+		int fd_num = select(0, &Copys, 0, 0, &TimeOut);
 
-    WSACleanup();
+		for (int i = 0; i < (int)Reads.fd_count; i++)
+		{
+			if (FD_ISSET(Reads.fd_array[i], &Copys))
+			{
+				if (Reads.fd_array[i] == LS)
+				{
+					SOCKADDR_IN CA;
+					memset(&CA, 0, sizeof(CA));
+					int sizeCA = sizeof(CA);
+					CS = accept(LS, (SOCKADDR*)&CA, &sizeCA);
+
+					FD_SET(CS, &Reads);
+					cout << "CONNECT : " << CS << '\n';
+
+					int SendBytes = send(CS, MoveBuffer, sizeof(MoveBuffer), 0);
+				}
+				else
+				{
+					char RecvBuffer[10] = { 0, };
+					int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
+
+					string str = RecvBuffer;
+
+					cout << str << '\n';
+
+					if (str == "LoginPack")
+					{
+						LoginProcess(CS);
+					}
+
+					if (RecvBytes < 0 || str == "EndBuffer")
+					{
+						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
+						SOCKET DS = Reads.fd_array[i];
+						FD_CLR(DS, &Reads);
+						closesocket(DS);
+					}
+				}
+			}
+		}
+	}
+
+	WSACleanup();
 }
-
