@@ -26,6 +26,11 @@
 #define IP_ADDRESS "127.0.0.1"
 #define PACKET_SIZE 100
 
+//--Network-------------------------------------------------------------------
+WSAData                      NET_WSADATA = { 0, };
+SOCKET                       NET_SERVERSOCKET = NULL;
+SOCKADDR_IN                  NET_SERVERADDR = { 0, };
+
 const int NET_PACKET_SIZE = 512;
 
 using namespace std;
@@ -36,46 +41,172 @@ const string password = "1234";
 
 vector<SOCKET> vSocketList;
 
-CRITICAL_SECTION ServerCS;
-
 sql::Driver* driver = nullptr;
 sql::Connection* con = nullptr;
 sql::Statement* stmt = nullptr;
 sql::PreparedStatement* pstmt = nullptr;
 sql::ResultSet* rs = nullptr;
 
+CRITICAL_SECTION CS_DB_HANDLER;
+
 int ProcessPacket(SOCKET CS, char* Buffer)
 {
     int Retval = 1;
+    string sqlQuery = "";
 
     char Packet[NET_PACKET_SIZE] = { 0, };
     memcpy(Packet, Buffer, sizeof(Packet));
     MessageHeader MsgHead = { 0, };
     memcpy(&MsgHead, Packet, sizeof(MsgHead));
 
+    string strContent = "";
+
     switch ((EMessageID)MsgHead.MessageID)
     {
         case EMessageID::C2S_ProcessPacket_1:
         {
-            cout << "11001" << '\n';
+            EnterCriticalSection(&CS_DB_HANDLER);
+            try
+            {
+                cout << "11001번 패킷 도착" << '\n';
+
+                sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
+                pstmt = con->prepareStatement(sqlQuery);
+                pstmt->setInt(1, MsgHead.MessageID);
+                rs = pstmt->executeQuery();
+
+                while (rs->next())
+                {
+                    strContent = rs->getString("PACKET_CONTENTS");
+                    break;
+                }
+
+                cout << strContent << '\n';
+
+            }
+            catch (sql::SQLException ex)
+            {
+                std::cout << "[ERR] SQL Error On C2S_REQ_LOGIN_PLAYER. ErrorMsg : " << ex.what() << std::endl;
+            }
+            if (rs) { rs->close(); rs = nullptr; }
+            if (pstmt) { pstmt->close(); pstmt = nullptr; }
+            LeaveCriticalSection(&CS_DB_HANDLER);
+
+            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
+            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
+            //MsgHead.ReceiverSocketID = (int)CS;
+            //MsgHead.MessageSize = sizeof(MessageHeader);
+            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
             break;
-        }
+        } 
         case EMessageID::C2S_ProcessPacket_2:
         {
-            cout << "11002" << '\n';
+            EnterCriticalSection(&CS_DB_HANDLER);
+            try
+            {
+                cout << "11002번 패킷 도착" << '\n';
+
+                sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
+                pstmt = con->prepareStatement(sqlQuery);
+                pstmt->setInt(1, MsgHead.MessageID);
+                rs = pstmt->executeQuery();
+
+                while (rs->next())
+                {
+                    strContent = rs->getString("PACKET_CONTENTS");
+                    break;
+                }
+
+                cout << strContent << '\n';
+
+            }
+            catch (sql::SQLException ex)
+            {
+                std::cout << "[ERR] SQL Error On C2S_REQ_LOGIN_PLAYER. ErrorMsg : " << ex.what() << std::endl;
+            }
+            if (rs) { rs->close(); rs = nullptr; }
+            if (pstmt) { pstmt->close(); pstmt = nullptr; }
+            LeaveCriticalSection(&CS_DB_HANDLER);
+
+            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
+            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
+            //MsgHead.ReceiverSocketID = (int)CS;
+            //MsgHead.MessageSize = sizeof(MessageHeader);
+            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
             break;
         }
         case EMessageID::C2S_ProcessPacket_3:
         {
-            cout << "11003" << '\n';
+            EnterCriticalSection(&CS_DB_HANDLER);
+            try
+            {
+                cout << "11003번 패킷 도착" << '\n';
+
+                sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
+                pstmt = con->prepareStatement(sqlQuery);
+                pstmt->setInt(1, MsgHead.MessageID);
+                rs = pstmt->executeQuery();
+
+                while (rs->next())
+                {
+                    strContent = rs->getString("PACKET_CONTENTS");
+                    break;
+                }
+
+                cout << strContent << '\n';
+
+            }
+            catch (sql::SQLException ex)
+            {
+                std::cout << "[ERR] SQL Error On C2S_REQ_LOGIN_PLAYER. ErrorMsg : " << ex.what() << std::endl;
+            }
+            if (rs) { rs->close(); rs = nullptr; }
+            if (pstmt) { pstmt->close(); pstmt = nullptr; }
+            LeaveCriticalSection(&CS_DB_HANDLER);
+
+            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
+            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
+            //MsgHead.ReceiverSocketID = (int)CS;
+            //MsgHead.MessageSize = sizeof(MessageHeader);
+            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
             break;
         }
         case EMessageID::C2S_ProcessPacket_4:
         {
-            cout << "11004" << '\n';
+            EnterCriticalSection(&CS_DB_HANDLER);
+            try
+            {
+                cout << "11004번 패킷 도착" << '\n';
+
+                sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
+                pstmt = con->prepareStatement(sqlQuery);
+                pstmt->setInt(1, MsgHead.MessageID);
+                rs = pstmt->executeQuery();
+
+                while (rs->next())
+                {
+                    strContent = rs->getString("PACKET_CONTENTS");
+                    break;
+                }
+
+                cout << strContent << '\n';
+
+            }
+            catch (sql::SQLException ex)
+            {
+                std::cout << "[ERR] SQL Error On C2S_REQ_LOGIN_PLAYER. ErrorMsg : " << ex.what() << std::endl;
+            }
+            if (rs) { rs->close(); rs = nullptr; }
+            if (pstmt) { pstmt->close(); pstmt = nullptr; }
+            LeaveCriticalSection(&CS_DB_HANDLER);
+
+            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
+            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
+            //MsgHead.ReceiverSocketID = (int)CS;
+            //MsgHead.MessageSize = sizeof(MessageHeader);
+            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
             break;
         }
-
         default:
             break;
     }
@@ -97,8 +228,7 @@ unsigned WINAPI WorkThread(void* Args)
         }
         int Retval = ProcessPacket(CS, &Buffer[0]);
 
-
-        cout << Buffer[0] << '\n';
+        //cout << Buffer[0] << '\n';
 
     }
     return 0;
@@ -110,9 +240,9 @@ int main()
     con = driver->connect(server, username, password);
     con->setSchema("UE4SERVER");
 
-    cout << "[채팅 서버 활성화]" << '\n';
+    cout << "[UE4 - TCP 서버 활성화]" << '\n';
 
-    InitializeCriticalSection(&ServerCS);
+    InitializeCriticalSection(&CS_DB_HANDLER);
 
     WSADATA WSAData;
     WSAStartup(MAKEWORD(2, 2), &WSAData);
@@ -136,9 +266,9 @@ int main()
 
         cout << "클라이언트 접속 : " << CS << '\n';
 
-        EnterCriticalSection(&ServerCS);
+        //EnterCriticalSection(&ServerCS);
         vSocketList.push_back(CS);
-        LeaveCriticalSection(&ServerCS);
+        //LeaveCriticalSection(&ServerCS);
 
         HANDLE hThread = (HANDLE)_beginthreadex(0, 0, WorkThread, (void*)&CS, 0, 0);
     }
