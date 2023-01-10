@@ -19,7 +19,29 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 
+	void SetupInputComponent() override;
+
 
 	SocketThreadClass* MyThreadObject;
 	
+	AActor* MyActor;
+	
+	void SpawnMyActor();
+
+	UFUNCTION()
+	void Stop();
+	UFUNCTION()
+	void MoveForward();
+	UFUNCTION()
+	void MoveRight();
+	UFUNCTION()
+	void MoveLeft();
+	UFUNCTION()
+	void MoveBackward();
+	UFUNCTION()
+	void ClientSpawn();
+
+	//Stop = 0, MoveForward = 1 , MoveRight = 2, MoveBackward = 3, MoveLeft = 4, spawn = 5 
+	int ClientOrder = 0;
+
 };

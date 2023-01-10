@@ -39,6 +39,13 @@ public:
 
 	SOCKET ServerSocket;
 	
+	//Stop = 0, MoveForward = 1 , MoveRight = 2, MoveBackward = 3, MoveLeft = 4, spawn = 5 
+	int CurrentOrder = 0;
+	int MyClientOrder = 0;
+
+	char Buffer[1024] = { 0, };
+
+
 };
 
 

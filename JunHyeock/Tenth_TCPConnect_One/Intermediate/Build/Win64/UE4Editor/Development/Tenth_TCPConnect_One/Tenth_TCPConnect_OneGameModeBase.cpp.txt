@@ -116,3 +116,5 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\qos.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
 C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One\PC_SocketPC.generated.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Source\Tenth_TCPConnect_One\MyPawn.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One\MyPawn.generated.h

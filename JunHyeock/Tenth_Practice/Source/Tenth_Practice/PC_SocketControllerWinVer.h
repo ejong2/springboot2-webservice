@@ -63,6 +63,7 @@ public:
 	void SpawnMyAvatar();
 
 
+
 	ClientSocketObject* SocketObject;
 	AActor* MySpawnActor;
 

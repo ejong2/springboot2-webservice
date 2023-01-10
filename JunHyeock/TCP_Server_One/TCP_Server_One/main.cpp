@@ -75,7 +75,7 @@ int main()
 				else
 				{
 					memset(Buffer, 0, 1024);
-					RecvBytes = recv(currentSocket, Buffer, 1024, 0);
+					RecvBytes = recv(currentSocket, Buffer, sizeof(Buffer), 0);
 					if (RecvBytes <= 0)
 					{	//disconnect
 						cout << "Disconnected" << endl;

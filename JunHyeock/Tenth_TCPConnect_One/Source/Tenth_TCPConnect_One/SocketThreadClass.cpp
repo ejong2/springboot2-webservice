@@ -2,6 +2,8 @@
 
 
 #include "SocketThreadClass.h"
+#include "Kismet/GameplayStatics.h"
+#include "PC_SocketPC.h"
 
 SocketThreadClass::SocketThreadClass()
 {
@@ -27,10 +29,25 @@ bool SocketThreadClass::Init()
 
 uint32 SocketThreadClass::Run()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Running"));
-	while (0)
-	{
 
+	while (1)
+	{
+				
+		APC_SocketPC* MyPC = Cast<APC_SocketPC>(UGameplayStatics::GetPlayerController(GWorld, 0));
+		if (MyPC)
+		{
+			MyClientOrder = MyPC->ClientOrder;
+		}
+
+		//memcpy(&Buffer[0], &MyClientOrder, sizeof(MyClientOrder));
+		Buffer[0] = MyClientOrder;
+		send(ServerSocket, Buffer, sizeof(Buffer), 0);
+
+		/*Sleep(1000.f);
+		UE_LOG(LogTemp, Warning, TEXT("Running"));*/
+		recv(ServerSocket, Buffer, sizeof(Buffer), 0);
+		//memcpy(&Buffer[0], &CurrentOrder, sizeof(CurrentOrder));
+		CurrentOrder = Buffer[0];
 	}
 	return 0;
 }

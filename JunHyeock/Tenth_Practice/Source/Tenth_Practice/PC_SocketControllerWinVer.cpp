@@ -28,6 +28,10 @@ void APC_SocketControllerWinVer::Tick(float DeltaTime)
 
 }
 
+void APC_SocketControllerWinVer::SetupInputComponent()
+{
+}
+
 
 
 APC_SocketControllerWinVer::~APC_SocketControllerWinVer()

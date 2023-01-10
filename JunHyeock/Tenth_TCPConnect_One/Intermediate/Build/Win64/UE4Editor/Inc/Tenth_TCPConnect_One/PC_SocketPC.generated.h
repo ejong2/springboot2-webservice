@@ -14,8 +14,26 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TENTH_TCPCONNECT_ONE_PC_SocketPC_generated_h
 
 #define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_SPARSE_DATA
-#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_RPC_WRAPPERS
-#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execClientSpawn); \
+	DECLARE_FUNCTION(execMoveBackward); \
+	DECLARE_FUNCTION(execMoveLeft); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execStop);
+
+
+#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execClientSpawn); \
+	DECLARE_FUNCTION(execMoveBackward); \
+	DECLARE_FUNCTION(execMoveLeft); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execStop);
+
+
 #define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_PC_SocketPC_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPC_SocketPC(); \
