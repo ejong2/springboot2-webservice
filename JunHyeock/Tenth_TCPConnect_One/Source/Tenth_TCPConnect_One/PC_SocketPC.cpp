@@ -121,6 +121,7 @@ void APC_SocketPC::MoveLeft()
 void APC_SocketPC::ClientSpawn()
 {
 	ClientOrder = 5;
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, FString::Printf(TEXT("Spawn")));
 }
 
 
