@@ -13,5 +13,6 @@ UCLASS()
 class TENTH_TCPCONNECT_ONE_API ATenth_TCPConnect_OneGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+public:
+	ATenth_TCPConnect_OneGameModeBase();
 };

@@ -62,8 +62,7 @@ public:
 
 	void MoveProcess(int Input);
 
-	void SpawnRequest();
-
+	
 
 
 

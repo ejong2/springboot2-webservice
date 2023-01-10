@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tenth_TCPConnect_One.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CCDD0EEB-3F9C-46FC-9966-84B412DD95D8}</UniqueIdentifier>
+      <UniqueIdentifier>{3F7D73EB-4832-459C-88BC-AF217DBE20C1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tenth_TCPConnect_One.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B120D850-70FC-4142-BB82-B8F016576123}</UniqueIdentifier>
+      <UniqueIdentifier>{1E64A48E-B977-46E1-ACE1-8E43EBCF9FB1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tenth_TCPConnect_One">
-      <UniqueIdentifier>{7F538BE0-769E-47E8-A6B6-7DD1D481BA9D}</UniqueIdentifier>
+      <UniqueIdentifier>{2A174F84-C0F2-47FB-8259-86797B3E9487}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Tenth_TCPConnect_One\PC_SocketPC.cpp">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_TCPConnect_One\PC_SocketPC.h">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_TCPConnect_One\SocketThreadClass.cpp">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_TCPConnect_One\SocketThreadClass.h">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Tenth_TCPConnect_One\Tenth_TCPConnect_One.Build.cs">
       <Filter>Source\Tenth_TCPConnect_One</Filter>
     </None>

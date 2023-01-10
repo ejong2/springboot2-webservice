@@ -32,16 +32,14 @@
 /wd4244
 /wd4838
 /I .
-/I C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One
-/I C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Source
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
+/I Runtime\Engine\Classes
+/I Runtime\Engine\Public
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime\CoreUObject\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
-/I Runtime\Engine\Classes
-/I Runtime\Engine\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\NetCore
 /I Runtime\Net
 /I Runtime\Net\Core\Classes
@@ -233,6 +231,13 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\GameProjectGeneration
+/I Editor\GameProjectGeneration\Classes
+/I Editor\GameProjectGeneration\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\HardwareTargeting
+/I Editor\HardwareTargeting\Public
+/I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One
+/I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Source
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -262,12 +267,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One\Tenth_TCPConnect_One.init.gen.cpp"
-/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Development\Tenth_TCPConnect_One\Definitions.Tenth_TCPConnect_One.h"
-/Fo"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Development\Tenth_TCPConnect_One\Tenth_TCPConnect_One.init.gen.cpp.obj"
+/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One\Tenth_TCPConnect_One.init.gen.cpp"
+/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Development\Tenth_TCPConnect_One\Definitions.Tenth_TCPConnect_One.h"
+/Fo"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Development\Tenth_TCPConnect_One\Tenth_TCPConnect_One.init.gen.cpp.obj"
 /TP
 /GR-
 /W4

@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_One_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x7E056A9D,
-				0x82DD0C33,
+				0x64A3DD36,
+				0xB6C879C5,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

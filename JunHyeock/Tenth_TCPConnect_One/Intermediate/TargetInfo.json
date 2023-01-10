@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Tenth_TCPConnect_One",
-			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_TCPConnect_One\\Source\\Tenth_TCPConnect_One.Target.cs",
+			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_Student_Project\\JunHyeock\\Tenth_TCPConnect_One\\Source\\Tenth_TCPConnect_One.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "Tenth_TCPConnect_OneEditor",
-			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_TCPConnect_One\\Source\\Tenth_TCPConnect_OneEditor.Target.cs",
+			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_Student_Project\\JunHyeock\\Tenth_TCPConnect_One\\Source\\Tenth_TCPConnect_OneEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

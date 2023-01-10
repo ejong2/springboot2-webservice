@@ -260,11 +260,11 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/I C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine
-/Yc"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.cpp"
-/Fo"C:\Users\YGL\Desktop\HachiTaya\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+/I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine
+/Yc"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.cpp"
+/Fo"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\Tenth_TCPConnect_OneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 /TP
 /GR-
 /W4
