@@ -60,6 +60,14 @@ public:
 
 	virtual ~APC_SocketControllerWinVer() override;
 
+	void SpawnMyAvatar();
+
+
+	ClientSocketObject* SocketObject;
+	AActor* MySpawnActor;
+
+	bool bDoOnce = true;
+
 
 
 

@@ -12,6 +12,17 @@ ASocketPawn::ASocketPawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bUseControllerRotationPitch = true;
+	bUseControllerRotationYaw = true;
+	bUseControllerRotationRoll = true;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>
+		sm_Cube(TEXT("StaticMesh'/Engine/VREditor/BasicMeshes/SM_Cube_01.SM_Cube_01'"));
+	UStaticMeshComponent* Cube = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
+
+	Cube->SetStaticMesh(sm_Cube.Object);
+	Cube->AttachTo(RootComponent);
+
 }
 
 // Called when the game starts or when spawned

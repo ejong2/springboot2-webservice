@@ -1,9 +1,9 @@
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice/Tenth_PracticeGameModeBase.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\Tenth_PracticeGameModeBase.generated.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice/Tenth_PracticeGameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice\Tenth_PracticeGameModeBase.generated.h

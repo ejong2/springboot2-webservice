@@ -2,21 +2,29 @@
 
 
 #include "PC_SocketControllerWinVer.h"
+#include "SocketPawn.h"
 
 void APC_SocketControllerWinVer::BeginPlay()
 {
 	Super::BeginPlay();
 
-	ClientSocketObject* SocketObject = new ClientSocketObject;
+	SocketObject = new ClientSocketObject;
 
 }
 
 void APC_SocketControllerWinVer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
+	if (bDoOnce)
+	{
+		if (SocketObject && SocketObject->NewPlayer != nullptr)
+		{
+			SpawnMyAvatar();
+			bDoOnce = false;
+		}
+	}
 
-	//TMap<SOCKET, PlayerData*>::TIterator MyPlayer = 
-	//auto MyPlayer = PlayerList.FindRef(MySocketID);
 
 }
 
@@ -24,6 +32,16 @@ void APC_SocketControllerWinVer::Tick(float DeltaTime)
 
 APC_SocketControllerWinVer::~APC_SocketControllerWinVer()
 {
+}
+
+void APC_SocketControllerWinVer::SpawnMyAvatar()
+{
+	if (SocketObject)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("SpawnMyAvatar")));
+		MySpawnActor = GWorld->SpawnActor<ASocketPawn>(FVector(0, 0, 0), FRotator(0, 0, 0));
+	}
+
 }
 
 

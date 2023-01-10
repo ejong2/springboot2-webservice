@@ -236,8 +236,8 @@
 /I Editor\GameProjectGeneration\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\HardwareTargeting
 /I Editor\HardwareTargeting\Public
-/I C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice
-/I C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source
+/I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_Practice
+/I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source
 /I Runtime\Networking\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
@@ -262,18 +262,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\INCLUDE"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice\PC_SocketControllerWinVer.cpp"
-/FI"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h"
-/Fo"C:\Hachitaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\PC_SocketControllerWinVer.cpp.obj"
+/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\Tenth_PracticeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Source\Tenth_Practice\PC_SocketControllerWinVer.cpp"
+/FI"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\Definitions.Tenth_Practice.h"
+/Fo"C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_Practice\Intermediate\Build\Win64\UE4Editor\Development\Tenth_Practice\PC_SocketControllerWinVer.cpp.obj"
 /TP
 /GR-
 /W4
