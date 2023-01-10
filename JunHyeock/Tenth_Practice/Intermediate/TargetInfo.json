@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Tenth_Practice",
-			"Path": "C:\\Hachitaya\\Tenth_Student_Project\\JunHyeock\\Tenth_Practice\\Source\\Tenth_Practice.Target.cs",
+			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_Student_Project\\JunHyeock\\Tenth_Practice\\Source\\Tenth_Practice.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "Tenth_PracticeEditor",
-			"Path": "C:\\Hachitaya\\Tenth_Student_Project\\JunHyeock\\Tenth_Practice\\Source\\Tenth_PracticeEditor.Target.cs",
+			"Path": "C:\\Users\\YGL\\Desktop\\HachiTaya\\Tenth_Student_Project\\JunHyeock\\Tenth_Practice\\Source\\Tenth_PracticeEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

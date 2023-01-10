@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tenth_Practice.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{50B113CE-C878-489E-984D-C34E6143DA67}</UniqueIdentifier>
+      <UniqueIdentifier>{7D53BA5F-02C2-49C4-B356-1C763F75509E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tenth_Practice.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{70B79118-268E-495F-942A-8CD3F6804486}</UniqueIdentifier>
+      <UniqueIdentifier>{C3B14133-A5FB-45D1-ACB7-60F9DD93B20D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Tenth_Practice">
-      <UniqueIdentifier>{C2820024-0550-4E97-A660-79E1E1FED32E}</UniqueIdentifier>
+      <UniqueIdentifier>{285A2543-8FB9-4E1E-8C85-A2FBF7E685BA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tenth_Practice\ClientSocketObject.cpp">
       <Filter>Source\Tenth_Practice</Filter>
