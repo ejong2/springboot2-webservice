@@ -75,16 +75,14 @@ int main()
 					char RecvBuffer[] = { 0, };
 					int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
 
-					cout << RecvBuffer << '\n';
-					if (RecvBuffer == "EndBuffer");
-					{
-						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
-						SOCKET DS = Reads.fd_array[i];
-						FD_CLR(DS, &Reads);
-						closesocket(DS);
-					}
-
-					// recv를 받았을때 음수 or 0 (에러 or 변동 X) (클라이언트가 나갔을때)
+					//cout << RecvBuffer << '\n';
+					//if (RecvBuffer == "EndBuffer");
+					//{
+					//	cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
+					//	SOCKET DS = Reads.fd_array[i];
+					//	FD_CLR(DS, &Reads);
+					//	closesocket(DS);
+					//}
 					if (RecvBytes <= 0 || RecvBuffer == "EndBuffer")
 					{
 						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
