@@ -26,11 +26,6 @@
 #define IP_ADDRESS "127.0.0.1"
 #define PACKET_SIZE 100
 
-//--Network-------------------------------------------------------------------
-WSAData                      NET_WSADATA = { 0, };
-SOCKET                       NET_SERVERSOCKET = NULL;
-SOCKADDR_IN                  NET_SERVERADDR = { 0, };
-
 const int NET_PACKET_SIZE = 512;
 
 using namespace std;
@@ -68,8 +63,9 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             EnterCriticalSection(&CS_DB_HANDLER);
             try
             {
-                cout << "11001번 패킷 도착" << '\n';
-
+                cout << MsgHead.MessageID <<"번 패킷 도착" << '\n';
+                cout << "메세지 사이즈 : " << MsgHead.MessageSize << '\n';
+     
                 sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
                 pstmt = con->prepareStatement(sqlQuery);
                 pstmt->setInt(1, MsgHead.MessageID);
@@ -81,7 +77,7 @@ int ProcessPacket(SOCKET CS, char* Buffer)
                     break;
                 }
 
-                cout << strContent << '\n';
+                cout << "DB 저장 컨텐츠 : " << strContent << '\n';
 
             }
             catch (sql::SQLException ex)
@@ -92,11 +88,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             if (pstmt) { pstmt->close(); pstmt = nullptr; }
             LeaveCriticalSection(&CS_DB_HANDLER);
 
-            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
-            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
-            //MsgHead.ReceiverSocketID = (int)CS;
-            //MsgHead.MessageSize = sizeof(MessageHeader);
-            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
+            cout << '\n';
+
             break;
         } 
         case EMessageID::C2S_ProcessPacket_2:
@@ -104,7 +97,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             EnterCriticalSection(&CS_DB_HANDLER);
             try
             {
-                cout << "11002번 패킷 도착" << '\n';
+                cout << MsgHead.MessageID << "번 패킷 도착" << '\n';
+                cout << "메세지 사이즈 : " << MsgHead.MessageSize << '\n';
 
                 sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
                 pstmt = con->prepareStatement(sqlQuery);
@@ -117,7 +111,7 @@ int ProcessPacket(SOCKET CS, char* Buffer)
                     break;
                 }
 
-                cout << strContent << '\n';
+                cout << "DB 저장 컨텐츠 : " << strContent << '\n';
 
             }
             catch (sql::SQLException ex)
@@ -128,11 +122,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             if (pstmt) { pstmt->close(); pstmt = nullptr; }
             LeaveCriticalSection(&CS_DB_HANDLER);
 
-            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
-            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
-            //MsgHead.ReceiverSocketID = (int)CS;
-            //MsgHead.MessageSize = sizeof(MessageHeader);
-            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
+            cout << '\n';
+
             break;
         }
         case EMessageID::C2S_ProcessPacket_3:
@@ -140,7 +131,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             EnterCriticalSection(&CS_DB_HANDLER);
             try
             {
-                cout << "11003번 패킷 도착" << '\n';
+                cout << MsgHead.MessageID << "번 패킷 도착" << '\n';
+                cout << "메세지 사이즈 : " << MsgHead.MessageSize << '\n';
 
                 sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
                 pstmt = con->prepareStatement(sqlQuery);
@@ -153,7 +145,7 @@ int ProcessPacket(SOCKET CS, char* Buffer)
                     break;
                 }
 
-                cout << strContent << '\n';
+                cout << "DB 저장 컨텐츠 : " << strContent << '\n';
 
             }
             catch (sql::SQLException ex)
@@ -164,11 +156,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             if (pstmt) { pstmt->close(); pstmt = nullptr; }
             LeaveCriticalSection(&CS_DB_HANDLER);
 
-            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
-            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
-            //MsgHead.ReceiverSocketID = (int)CS;
-            //MsgHead.MessageSize = sizeof(MessageHeader);
-            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
+            cout << '\n';
+
             break;
         }
         case EMessageID::C2S_ProcessPacket_4:
@@ -176,20 +165,21 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             EnterCriticalSection(&CS_DB_HANDLER);
             try
             {
-                cout << "11004번 패킷 도착" << '\n';
+                cout << MsgHead.MessageID << "번 패킷 도착" << '\n';
+                cout << "메세지 사이즈 : " << MsgHead.MessageSize << '\n';
 
                 sqlQuery = "SELECT PACKET_CONTENTS FROM PacketTable WHERE PACKET = ?";
                 pstmt = con->prepareStatement(sqlQuery);
                 pstmt->setInt(1, MsgHead.MessageID);
                 rs = pstmt->executeQuery();
-
+                                                                                         
                 while (rs->next())
                 {
                     strContent = rs->getString("PACKET_CONTENTS");
                     break;
                 }
 
-                cout << strContent << '\n';
+                cout << "DB 저장 컨텐츠 : " << strContent << '\n';
 
             }
             catch (sql::SQLException ex)
@@ -200,11 +190,8 @@ int ProcessPacket(SOCKET CS, char* Buffer)
             if (pstmt) { pstmt->close(); pstmt = nullptr; }
             LeaveCriticalSection(&CS_DB_HANDLER);
 
-            //MsgHead.MessageID = (int)EMessageID::S2C_ProcessPacket_1;
-            //MsgHead.SenderSocketID = (int)NET_SERVERSOCKET;
-            //MsgHead.ReceiverSocketID = (int)CS;
-            //MsgHead.MessageSize = sizeof(MessageHeader);
-            //Retval = send(CS, (char*)MsgHead, MsgHead.MessageSize, 0);
+            cout << '\n';
+
             break;
         }
         default:
@@ -227,9 +214,6 @@ unsigned WINAPI WorkThread(void* Args)
             break; 
         }
         int Retval = ProcessPacket(CS, &Buffer[0]);
-
-        //cout << Buffer[0] << '\n';
-
     }
     return 0;
 }
@@ -266,9 +250,7 @@ int main()
 
         cout << "클라이언트 접속 : " << CS << '\n';
 
-        //EnterCriticalSection(&ServerCS);
         vSocketList.push_back(CS);
-        //LeaveCriticalSection(&ServerCS);
 
         HANDLE hThread = (HANDLE)_beginthreadex(0, 0, WorkThread, (void*)&CS, 0, 0);
     }
