@@ -48,8 +48,6 @@ int main()
 			{
 				if (Reads.fd_array[i] == LS)
 				{
-					char RecvBuffer[1024] = { 0, };
-
 					SOCKADDR_IN CA;
 					memset(&CA, 0, sizeof(CA));
 					int sizeCA = sizeof(CA);
@@ -58,15 +56,42 @@ int main()
 					FD_SET(CS, &Reads);
 					cout << "CONNECT : " << CS << '\n';
 
-					int RecvBytes = recv(CS, RecvBuffer, sizeof(RecvBuffer), 0);
-					if (RecvBytes <= 0)
+					while (true)
 					{
-						cout << "DISCONNECT : " << CS << '\n';
+						Sleep(1000);
+						int SendBytes = send(CS, MoveBuffer, sizeof(MoveBuffer), 0);
+
+						char RecvBuffer[] = { 0, };
+						int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
+
+						if (RecvBytes)
+						{
+							break;
+						}
+					}
+				}
+				else
+				{
+					char RecvBuffer[] = { 0, };
+					int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
+
+					cout << RecvBuffer << '\n';
+					if (RecvBuffer == "EndBuffer");
+					{
+						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
 						SOCKET DS = Reads.fd_array[i];
 						FD_CLR(DS, &Reads);
 						closesocket(DS);
 					}
-					int SendBytes = send(CS, MoveBuffer, sizeof(MoveBuffer), 0);
+
+					// recv를 받았을때 음수 or 0 (에러 or 변동 X) (클라이언트가 나갔을때)
+					if (RecvBytes <= 0 || RecvBuffer == "EndBuffer")
+					{
+						cout << "DISCONNECT : " << Reads.fd_array[i] << '\n';
+						SOCKET DS = Reads.fd_array[i];
+						FD_CLR(DS, &Reads);
+						closesocket(DS);
+					}
 				}
 			}
 		}
