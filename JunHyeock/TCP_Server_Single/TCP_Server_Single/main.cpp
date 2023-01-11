@@ -1,7 +1,19 @@
+#include <stdlib.h>
+//#include <Windows.h>
 #include <iostream>
 #include <WinSock2.h>
 
+
 #pragma comment(lib, "ws2_32.lib")
+
+#include "mysql-connector/include/jdbc/mysql_connection.h"
+#include "mysql-connector/include/jdbc/cppconn/driver.h"
+#include "mysql-connector/include/jdbc/cppconn/exception.h"
+#include "mysql-connector/include/jdbc/cppconn/prepared_statement.h"
+
+#pragma comment(lib, "mysql-connector/lib64/vs14/debug/mysqlcppconn.lib")
+
+
 
 using namespace std;
 
@@ -14,10 +26,45 @@ struct packet
 	int z = 0;
 };
 
+const string server = "127.0.0.1:3306";
+const string username = "root";
+const string password = "zms134";
+
 
 
 int main()
 {
+
+	sql::Driver* driver;
+	sql::Connection* con;
+	sql::Statement* stmt;
+	sql::PreparedStatement* pstmt;
+
+	try
+	{
+	driver = get_driver_instance();
+	con = driver->connect(server, username, password);
+	}
+	catch (sql::SQLException e)
+	{
+		cout << "Can't connect to Server" << endl;
+		system("puase");
+		exit(1);
+	}
+
+	con->setSchema("myschema");
+
+	stmt = con->createStatement();
+	stmt->execute("DROP Table IF EXISTS inventory");
+	cout << "Finished dropping table (if existed)" << endl;
+	stmt->execute
+	("CREATE TABLE inventory(id serial PRIMARY KEY, name VARCHAR(50), quantity INTEGER);");
+	cout << "Finished creating table" << endl;
+	delete stmt;
+
+	pstmt = con->prepareStatement("INSERT INTO inventory");
+
+
 	WSADATA wsaData;
 
 	SOCKET ServerSocket;
