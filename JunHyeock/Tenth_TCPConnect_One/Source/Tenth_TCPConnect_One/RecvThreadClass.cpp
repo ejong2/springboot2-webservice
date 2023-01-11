@@ -13,6 +13,7 @@ RecvThreadClass::RecvThreadClass()
 
 RecvThreadClass::~RecvThreadClass()
 {
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Thread Destructor")));
     if (Thread)
     {
         //Shutdown thread
@@ -35,7 +36,7 @@ bool RecvThreadClass::Init()
 
 uint32 RecvThreadClass::Run()
 {
-    while (1)
+    while (bCanRunning)
     {
         int32 RecvBytes = 0;
         if (Socket)
@@ -53,6 +54,12 @@ uint32 RecvThreadClass::Run()
 
 void RecvThreadClass::Exit()
 {
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Thread Exit")));
+    if (Socket)
+    {
+        //Socket Disconnect
+        Socket->Close();
+    }
 }
 
 bool RecvThreadClass::ConnectToServer()

@@ -24,16 +24,14 @@ void ATenth_TCPConnect_OneGameModeBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("%d"), GameModePacket.Header));
-	ProcessPacket();
+	if (bIsActivate)
+	{
+		ProcessPacket();
+	}
 }
 
 void ATenth_TCPConnect_OneGameModeBase::ProcessPacket()
 {
-	if (!bIsActivate)
-	{
-		return;
-	}
-
 	switch (GameModePacket.Header)
 	{
 	case 1:
@@ -50,4 +48,26 @@ void ATenth_TCPConnect_OneGameModeBase::ProcessPacket()
 	default:
 		break;
 	}
+}
+
+void ATenth_TCPConnect_OneGameModeBase::StartThread()
+{
+	//if (MyThreadObject==nullptr)
+	//{
+	//	MyThreadObject = new RecvThreadClass;
+	//}
+
+	bIsActivate = true;
+}
+
+void ATenth_TCPConnect_OneGameModeBase::EndThread()
+{
+	//if (MyThreadObject)
+	//{
+	//	MyThreadObject->bCanRunning = false;
+	//	delete MyThreadObject;
+
+	//}
+	bIsActivate = false;
+
 }

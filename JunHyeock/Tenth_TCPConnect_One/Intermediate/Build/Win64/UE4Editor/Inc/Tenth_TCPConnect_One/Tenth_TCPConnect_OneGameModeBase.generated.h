@@ -14,8 +14,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TENTH_TCPCONNECT_ONE_Tenth_TCPConnect_OneGameModeBase_generated_h
 
 #define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_SPARSE_DATA
-#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_RPC_WRAPPERS
-#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execEndThread); \
+	DECLARE_FUNCTION(execStartThread);
+
+
+#define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execEndThread); \
+	DECLARE_FUNCTION(execStartThread);
+
+
 #define Tenth_TCPConnect_One_Source_Tenth_TCPConnect_One_Tenth_TCPConnect_OneGameModeBase_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATenth_TCPConnect_OneGameModeBase(); \

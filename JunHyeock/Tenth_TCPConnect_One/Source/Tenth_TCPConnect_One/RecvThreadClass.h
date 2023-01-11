@@ -24,8 +24,10 @@ public:
 
 	bool ConnectToServer();
 
+	
 
-
+	bool bCanRunning = true;
+	
 	FRunnableThread* Thread;
 
 	FSocket* Socket = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateSocket(NAME_Stream, TEXT("default"), false);

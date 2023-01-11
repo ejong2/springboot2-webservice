@@ -39,5 +39,11 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	bool bIsActivate = false;
+
+	UFUNCTION(BlueprintCallable)
+	void StartThread();
+	UFUNCTION(BlueprintCallable)
+	void EndThread();
+
 	
 };
