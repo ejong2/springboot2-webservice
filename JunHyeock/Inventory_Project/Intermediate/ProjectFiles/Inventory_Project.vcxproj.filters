@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Inventory_Project.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{CB2D3DA6-E800-47BB-879C-9FDF23119061}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Inventory_Project.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Inventory_ProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E29EEB69-845D-48E5-A721-E520FB332E53}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Inventory_Project">
+      <UniqueIdentifier>{FD9CA243-9673-4473-B221-EF1A13A4F204}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Inventory_Project\Inventory_Project.Build.cs">
+      <Filter>Source\Inventory_Project</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Inventory_Project\Inventory_Project.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\Inventory_Project.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\Inventory_ProjectGameModeBase.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\Inventory_ProjectGameModeBase.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\MainGamePawn.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\MainGamePawn.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\MainGamePlayerController.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\MainGamePlayerController.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\UMG_Inventory.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\UMG_Inventory.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
