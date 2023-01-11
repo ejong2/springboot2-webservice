@@ -31,6 +31,12 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_OneGameModeBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsActivate_MetaData[];
+#endif
+		static void NewProp_bIsActivate_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsActivate;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -47,6 +53,20 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_OneGameModeBase() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate_MetaData[] = {
+		{ "Category", "Tenth_TCPConnect_OneGameModeBase" },
+		{ "ModuleRelativePath", "Tenth_TCPConnect_OneGameModeBase.h" },
+	};
+#endif
+	void Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate_SetBit(void* Obj)
+	{
+		((ATenth_TCPConnect_OneGameModeBase*)Obj)->bIsActivate = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate = { "bIsActivate", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATenth_TCPConnect_OneGameModeBase), &Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::NewProp_bIsActivate,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATenth_TCPConnect_OneGameModeBase>::IsAbstract,
 	};
@@ -56,11 +76,11 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_OneGameModeBase() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::PropPointers),
 		0,
 		0x009002ACu,
 		METADATA_PARAMS(Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ATenth_TCPConnect_OneGameModeBase_Statics::Class_MetaDataParams))
@@ -74,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_OneGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATenth_TCPConnect_OneGameModeBase, 201211833);
+	IMPLEMENT_CLASS(ATenth_TCPConnect_OneGameModeBase, 352336442);
 	template<> TENTH_TCPCONNECT_ONE_API UClass* StaticClass<ATenth_TCPConnect_OneGameModeBase>()
 	{
 		return ATenth_TCPConnect_OneGameModeBase::StaticClass();

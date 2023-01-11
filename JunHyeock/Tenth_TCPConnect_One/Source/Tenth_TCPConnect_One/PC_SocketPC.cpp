@@ -8,59 +8,59 @@
 void APC_SocketPC::BeginPlay()
 {
 	Super::BeginPlay();
-	MyThreadObject = new SocketThreadClass;
-	EnableInput(UGameplayStatics::GetPlayerController(GWorld, 0));
+	//MyThreadObject = new SocketThreadClass;
+	//EnableInput(UGameplayStatics::GetPlayerController(GWorld, 0));
 
 }
 
 void APC_SocketPC::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (MyThreadObject)
-	{
-		switch (MyThreadObject->CurrentOrder)
-		{
-		case 1: 
-			//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveForward")));
-			if (MyActor)
-			{
-				MyActor->AddActorWorldOffset(FVector(1, 0, 0));
-			}
-			break;
-		case 2:
-			//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveRight")));
-			if (MyActor)
-			{
-				MyActor->AddActorWorldOffset(FVector(0, 1, 0));
-			}
-			break;
-		case 3:
-			//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveBackward")));
-			if (MyActor)
-			{
-				MyActor->AddActorWorldOffset(FVector(-1, 0, 0));
-			}
-			break;
-		case 4:
-			//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveLeft")));
-			if (MyActor)
-			{
-				MyActor->AddActorWorldOffset(FVector(0, -1, 0));
-			}
-			break;
-		case 5:
-			GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("Spawn")));
-			if (MyActor == nullptr)
-			{
-				SpawnMyActor();
-			}
-			break;
+	//if (MyThreadObject)
+	//{
+	//	switch (MyThreadObject->CurrentOrder)
+	//	{
+	//	case 1: 
+	//		//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveForward")));
+	//		if (MyActor)
+	//		{
+	//			MyActor->AddActorWorldOffset(FVector(1, 0, 0));
+	//		}
+	//		break;
+	//	case 2:
+	//		//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveRight")));
+	//		if (MyActor)
+	//		{
+	//			MyActor->AddActorWorldOffset(FVector(0, 1, 0));
+	//		}
+	//		break;
+	//	case 3:
+	//		//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveBackward")));
+	//		if (MyActor)
+	//		{
+	//			MyActor->AddActorWorldOffset(FVector(-1, 0, 0));
+	//		}
+	//		break;
+	//	case 4:
+	//		//GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("MoveLeft")));
+	//		if (MyActor)
+	//		{
+	//			MyActor->AddActorWorldOffset(FVector(0, -1, 0));
+	//		}
+	//		break;
+	//	case 5:
+	//		GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("Spawn")));
+	//		if (MyActor == nullptr)
+	//		{
+	//			SpawnMyActor();
+	//		}
+	//		break;
 
-		default:
-			GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("Nothting")));
-			break;
-		}
-	}
+	//	default:
+	//		GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Blue, FString::Printf(TEXT("Nothting")));
+	//		break;
+	//	}
+	//}
 	
 }
 

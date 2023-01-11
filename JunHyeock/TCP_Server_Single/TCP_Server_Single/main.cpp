@@ -7,9 +7,9 @@ using namespace std;
 
 struct packet 
 {
-	//spawn , move , destroy
-	int header = 0;
-	int x = 0;
+	//spawn , move = 1 , destroy
+	int header = 1;
+	int x = 1;
 	int y = 0;
 	int z = 0;
 };
@@ -46,12 +46,13 @@ int main()
 	ClientSocket = accept(ServerSocket, reinterpret_cast<sockaddr*>(&ClientSockAddr), &ClientSockAddrLength);
 	cout << "======accept======" << endl;
 
-	char Buffer[32] = { 0, };
+	//char Buffer[32] = { 0, };
 
 	while (1)
 	{
 		//Buffer Á÷·ÄÈ­ ? 
 		send(ClientSocket, (char*)&mypack, sizeof(mypack), 0);
+		cout << "Send Once" << endl;
 	}
 
 	return 0;

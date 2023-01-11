@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tenth_TCPConnect_One.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DF0CFADD-566A-460B-9CDB-3D63EAB60E00}</UniqueIdentifier>
+      <UniqueIdentifier>{F579197F-905A-4EF8-9646-F803AC4E38B9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tenth_TCPConnect_One.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{51331B44-4B5D-43F6-8B4F-B9AA515928B1}</UniqueIdentifier>
+      <UniqueIdentifier>{A25C70A4-654F-416C-8062-0F11F58944F9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Tenth_TCPConnect_One">
-      <UniqueIdentifier>{2E9CB539-B953-40C6-9589-34E004FC5142}</UniqueIdentifier>
+      <UniqueIdentifier>{88E62CFF-FC46-4135-AF9C-3B27D4FB617D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tenth_TCPConnect_One\MyCubeActor.cpp">
       <Filter>Source\Tenth_TCPConnect_One</Filter>
@@ -42,6 +45,12 @@
       <Filter>Source\Tenth_TCPConnect_One</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tenth_TCPConnect_One\PC_SocketPC.h">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tenth_TCPConnect_One\RecvThreadClass.cpp">
+      <Filter>Source\Tenth_TCPConnect_One</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tenth_TCPConnect_One\RecvThreadClass.h">
       <Filter>Source\Tenth_TCPConnect_One</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Tenth_TCPConnect_One\SocketThreadClass.cpp">

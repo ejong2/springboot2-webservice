@@ -40,8 +40,8 @@ uint32 SocketThreadClass::Run()
 		}
 
 		//memcpy(&Buffer[0], &MyClientOrder, sizeof(MyClientOrder));
-		Buffer[0] = MyClientOrder;
-		send(ServerSocket, Buffer, sizeof(Buffer), 0);
+		//Buffer[0] = MyClientOrder;
+		//send(ServerSocket, Buffer, sizeof(Buffer), 0);
 
 		/*Sleep(1000.f);
 		UE_LOG(LogTemp, Warning, TEXT("Running"));*/

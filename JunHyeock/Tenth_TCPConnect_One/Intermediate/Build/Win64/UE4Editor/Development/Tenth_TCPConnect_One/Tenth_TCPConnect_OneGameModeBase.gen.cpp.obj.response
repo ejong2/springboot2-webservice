@@ -238,6 +238,7 @@
 /I Editor\HardwareTargeting\Public
 /I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Intermediate\Build\Win64\UE4Editor\Inc\Tenth_TCPConnect_One
 /I C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Tenth_TCPConnect_One\Source
+/I Runtime\Networking\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
