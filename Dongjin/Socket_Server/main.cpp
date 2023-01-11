@@ -44,9 +44,20 @@ int main()
 	SOCKADDR_IN ClientAddrIn;
 	memset(&ClientAddrIn, 0, sizeof(SOCKADDR_IN));
 	int ClientLength = sizeof(ClientAddrIn);
-	SOCKET ClientSocket = accept(ServerSocket, (SOCKADDR*)&ClientAddrIn, &ClientLength);
+	
 
 	cout << "Server Start" << endl;
+
+
+
+	while (true)
+	{
+
+		SOCKET ClientSocket = accept(ServerSocket, (SOCKADDR*)&ClientAddrIn, &ClientLength);
+		cout << "¿¬°á Áß... " << endl;
+
+		
+	}
 
 	closesocket(ServerSocket);
 
