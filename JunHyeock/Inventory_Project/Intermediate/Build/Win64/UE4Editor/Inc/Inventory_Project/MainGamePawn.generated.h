@@ -13,20 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define INVENTORY_PROJECT_MainGamePawn_generated_h
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_SPARSE_DATA
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execGoRight); \
-	DECLARE_FUNCTION(execGoForward);
-
-
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execGoRight); \
-	DECLARE_FUNCTION(execGoForward);
-
-
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_INCLASS_NO_PURE_DECLS \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_SPARSE_DATA
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_RPC_WRAPPERS
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMainGamePawn(); \
 	friend struct Z_Construct_UClass_AMainGamePawn_Statics; \
@@ -35,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AMainGamePawn)
 
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_INCLASS \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesAMainGamePawn(); \
 	friend struct Z_Construct_UClass_AMainGamePawn_Statics; \
@@ -44,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AMainGamePawn)
 
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_STANDARD_CONSTRUCTORS \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMainGamePawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMainGamePawn) \
@@ -57,7 +47,7 @@ private: \
 public:
 
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_ENHANCED_CONSTRUCTORS \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMainGamePawn(AMainGamePawn&&); \
@@ -68,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMainGamePawn)
 
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_PRIVATE_PROPERTY_OFFSET
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_9_PROLOG
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_GENERATED_BODY_LEGACY \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_PRIVATE_PROPERTY_OFFSET
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_10_PROLOG
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_SPARSE_DATA \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_RPC_WRAPPERS \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_INCLASS \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_STANDARD_CONSTRUCTORS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_PRIVATE_PROPERTY_OFFSET \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_SPARSE_DATA \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_RPC_WRAPPERS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_INCLASS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_GENERATED_BODY \
+#define Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_SPARSE_DATA \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_INCLASS_NO_PURE_DECLS \
-	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_12_ENHANCED_CONSTRUCTORS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_PRIVATE_PROPERTY_OFFSET \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_SPARSE_DATA \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_INCLASS_NO_PURE_DECLS \
+	Inventory_Project_Source_Inventory_Project_MainGamePawn_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

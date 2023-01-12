@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define INVENTORY_PROJECT_MainGamePlayerController_generated_h
 
 #define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_SPARSE_DATA
-#define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_RPC_WRAPPERS
-#define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAddItemToInventory);
+
+
+#define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAddItemToInventory);
+
+
 #define Inventory_Project_Source_Inventory_Project_MainGamePlayerController_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMainGamePlayerController(); \

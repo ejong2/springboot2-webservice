@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Inventory_Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CB2D3DA6-E800-47BB-879C-9FDF23119061}</UniqueIdentifier>
+      <UniqueIdentifier>{51B0FFDD-574F-4E80-BDF0-C22B5A04BC5F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Inventory_Project.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{E29EEB69-845D-48E5-A721-E520FB332E53}</UniqueIdentifier>
+      <UniqueIdentifier>{C3446248-2D24-405D-950A-CB5AAE878D85}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Inventory_Project">
-      <UniqueIdentifier>{FD9CA243-9673-4473-B221-EF1A13A4F204}</UniqueIdentifier>
+      <UniqueIdentifier>{DB46FB2C-2386-4B8C-B09E-CBF1E77387BB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Inventory_Project\AItemActor.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\AItemActor.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Inventory_Project\Inventory_Project.Build.cs">
       <Filter>Source\Inventory_Project</Filter>
     </None>
@@ -42,6 +48,12 @@
       <Filter>Source\Inventory_Project</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Inventory_Project\Inventory_ProjectGameModeBase.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\MainGameCharacter.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\MainGameCharacter.h">
       <Filter>Source\Inventory_Project</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Inventory_Project\MainGamePawn.cpp">
@@ -60,6 +72,12 @@
       <Filter>Source\Inventory_Project</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Inventory_Project\UMG_Inventory.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\UMG_InventoryItem.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\UMG_InventoryItem.h">
       <Filter>Source\Inventory_Project</Filter>
     </ClInclude>
   </ItemGroup>

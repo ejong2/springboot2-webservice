@@ -1,17 +1,21 @@
 C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Development\Inventory_Project\Definitions.Inventory_Project.h
-C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Source\Inventory_Project\UMG_Inventory.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Widget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Button.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ContentWidget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/PanelWidget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/PanelSlot.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Visual.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Visual.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelSlot.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Widget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Slate/WidgetTransform.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetTransform.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/WidgetNavigation.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\SlateCore\Public\Types/NavigationMetaData.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetNavigation.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Widget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/NamedSlotInterface.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\NamedSlotInterface.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Layout/Anchors.h
@@ -99,4 +103,35 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ContentWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Button.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/WidgetTree.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetTree.generated.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Source\Inventory_Project\UMG_Inventory.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Source\Inventory_Project\UMG_InventoryItem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Border.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Border.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/TextBlock.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/TextWidgetTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextWidgetTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextBlock.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/IUserObjectListEntry.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint\IUserListEntry.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\IUserListEntry.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\IUserObjectListEntry.generated.h
+C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\UMG_InventoryItem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/TileView.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components\ListView.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ListViewBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Slate/SObjectTableRow.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Slate/SObjectWidget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidgetPool.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidgetPool.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Layout/SSpacer.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Views/STileView.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Views/STreeView.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ListViewBase.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ListView.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TileView.generated.h
 C:\Users\YGL\Desktop\HachiTaya\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\UMG_Inventory.generated.h

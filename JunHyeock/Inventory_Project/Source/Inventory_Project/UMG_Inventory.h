@@ -4,7 +4,11 @@
 
 
 #include "CoreMinimal.h"
+#include "UMG_InventoryItem.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/TextBlock.h"
+#include "Components/Button.h"
+#include "Components/TileView.h"
 #include "UMG_Inventory.generated.h"
 
 /**
@@ -23,12 +27,24 @@ public:
 
 	virtual void NativeConstruct() override;
 
-	
+	void OnButtonClickExample();
 
-	UPROPERTY()
-	class UButton* ExampleButton;
 
-	//class UPanelWidget* RootWidget = Cast<UPanelWidget>(GetRootWidget());
+	void AddGainItem();
+
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* ExampleButton;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* MYTEXT;
+
+	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
+	UTileView* MyItems;
+
+
+
+
 
 
 	

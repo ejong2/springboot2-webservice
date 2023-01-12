@@ -2,10 +2,11 @@
 
 
 #include "MainGamePlayerController.h"
-#include "UMG_Inventory.h"
+
 
 AMainGamePlayerController::AMainGamePlayerController()
 {
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 AMainGamePlayerController::~AMainGamePlayerController()
@@ -15,7 +16,9 @@ AMainGamePlayerController::~AMainGamePlayerController()
 void AMainGamePlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
+	//Widget Must Be Created On PlayerController
+	CreateMaingameWidget();
 
 }
 
@@ -24,14 +27,65 @@ void AMainGamePlayerController::Tick(float DeltaSecond)
 	Super::Tick(DeltaSecond);
 }
 
+void AMainGamePlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+	InputComponent->BindAction(TEXT("InventoryToggle"), IE_Pressed, this, &AMainGamePlayerController::InventoryToggle);
+
+}
+
+void AMainGamePlayerController::MoveForward(float Axis)
+{
+	
+}
+
+void AMainGamePlayerController::MoveRight(float Axis)
+{
+
+}
+
 void AMainGamePlayerController::CreateMaingameWidget()
 {
-	UserInterface = CreateWidget<UUMG_Inventory>(this, UUMG_Inventory::StaticClass());
-	FInputModeGameAndUI Mode;
-	Mode.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
-	Mode.SetHideCursorDuringCapture(false);
-	SetInputMode(Mode);
+	if (IsValid(WidgetClass))
+	{
+		InvenWidget = Cast<UUMG_Inventory>(CreateWidget(GetWorld(), WidgetClass));
+		InvenWidget->MYTEXT->SetText(FText::FromString(ItemTagText));
 
-	//							Z Order
-	UserInterface->AddToViewport(9999);
+		if (InvenWidget != nullptr)
+		{
+			InvenWidget->AddToViewport(); 
+
+			//Widget contstructor Set
+			InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+		}
+	}
+
+}
+
+void AMainGamePlayerController::InventoryToggle()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	if (InvenWidget->GetVisibility() == ESlateVisibility::Collapsed)
+	{
+		InvenWidget->SetVisibility(ESlateVisibility::Visible);
+	}
+
+	else if (InvenWidget->GetVisibility() == ESlateVisibility::Visible)
+	{
+		InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+	}
+}
+
+void AMainGamePlayerController::AddItemToInventory()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	//TSubclassOf<UUMG_InventoryItem> CurrentItemClass = UUMG_InventoryItem::StaticClass();
+	TSubclassOf<UUMG_InventoryItem> CurrentItemClass;
+	UUMG_InventoryItem* CurrentItem = CreateWidget<UUMG_InventoryItem>(GetWorld(), CurrentItemClass);
+	InvenWidget->MyItems->AddItem(CurrentItem);
+
 }

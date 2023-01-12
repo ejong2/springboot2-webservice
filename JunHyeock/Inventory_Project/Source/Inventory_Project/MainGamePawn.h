@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "UMG_Inventory.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "MainGamePawn.generated.h"
@@ -26,11 +27,15 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void InitComponents();
 
-	UFUNCTION()
+	//movement
 	void GoForward(float Axis);
-
-	UFUNCTION()
 	void GoRight(float Axis);
+
+
+
+public:
+
 
 };
