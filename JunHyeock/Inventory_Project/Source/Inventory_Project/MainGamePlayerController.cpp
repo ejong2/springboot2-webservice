@@ -78,14 +78,12 @@ void AMainGamePlayerController::InventoryToggle()
 	}
 }
 
-void AMainGamePlayerController::AddItemToInventory()
+void AMainGamePlayerController::AddItemToInventory(UObject* Obj)
 {
 	if (InvenWidget == nullptr)
 		return;
 
-	//TSubclassOf<UUMG_InventoryItem> CurrentItemClass = UUMG_InventoryItem::StaticClass();
-	TSubclassOf<UUMG_InventoryItem> CurrentItemClass;
-	UUMG_InventoryItem* CurrentItem = CreateWidget<UUMG_InventoryItem>(GetWorld(), CurrentItemClass);
-	InvenWidget->MyItems->AddItem(CurrentItem);
+	InvenWidget->AddItemtoInventory(Obj);
+
 
 }

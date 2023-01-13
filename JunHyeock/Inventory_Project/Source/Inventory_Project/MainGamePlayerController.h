@@ -34,7 +34,7 @@ public:
 	void InventoryToggle();
 
 	UFUNCTION(BlueprintCallable)
-	void AddItemToInventory();
+	void AddItemToInventory(UObject* Obj);
 
 
 
@@ -48,7 +48,6 @@ public:
 	UUMG_Inventory* InvenWidget = nullptr;
 
 	FString ItemTagText = TEXT("TEXT Sample");
-
 
 
 };

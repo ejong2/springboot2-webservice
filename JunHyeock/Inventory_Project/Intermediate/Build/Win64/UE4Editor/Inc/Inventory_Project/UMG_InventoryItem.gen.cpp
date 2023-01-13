@@ -35,13 +35,17 @@ void EmptyLinkFunctionForGeneratedCodeUMG_InventoryItem() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Background_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBackground_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Background;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBackground;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NameText_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NameText;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemCount_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemCount;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -59,24 +63,35 @@ void EmptyLinkFunctionForGeneratedCodeUMG_InventoryItem() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_Background_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemBackground_MetaData[] = {
+		{ "BindWidget", "" },
 		{ "Comment", "// UI????????\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UMG_InventoryItem.h" },
 		{ "ToolTip", "UI????????" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_Background = { "Background", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_InventoryItem, Background), Z_Construct_UClass_UBorder_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_Background_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_Background_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemBackground = { "ItemBackground", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_InventoryItem, ItemBackground), Z_Construct_UClass_UBorder_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemBackground_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemBackground_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_NameText_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemName_MetaData[] = {
+		{ "BindWidget", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UMG_InventoryItem.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_NameText = { "NameText", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_InventoryItem, NameText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_NameText_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_NameText_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemName = { "ItemName", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_InventoryItem, ItemName), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemCount_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UMG_InventoryItem.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemCount = { "ItemCount", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_InventoryItem, ItemCount), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemCount_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UUMG_InventoryItem_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_Background,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_NameText,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemBackground,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_InventoryItem_Statics::NewProp_ItemCount,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UUMG_InventoryItem_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UUserObjectListEntry_NoRegister, (int32)VTABLE_OFFSET(UUMG_InventoryItem, IUserObjectListEntry), false },
@@ -108,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeUMG_InventoryItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UUMG_InventoryItem, 2031701165);
+	IMPLEMENT_CLASS(UUMG_InventoryItem, 2576747926);
 	template<> INVENTORY_PROJECT_API UClass* StaticClass<UUMG_InventoryItem>()
 	{
 		return UUMG_InventoryItem::StaticClass();

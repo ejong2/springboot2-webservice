@@ -17,15 +17,17 @@ void EmptyLinkFunctionForGeneratedCodeMainGamePlayerController() {}
 	INVENTORY_PROJECT_API UClass* Z_Construct_UClass_AMainGamePlayerController();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	UPackage* Z_Construct_UPackage__Script_Inventory_Project();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	INVENTORY_PROJECT_API UClass* Z_Construct_UClass_UUMG_Inventory_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AMainGamePlayerController::execAddItemToInventory)
 	{
+		P_GET_OBJECT(UObject,Z_Param_Obj);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddItemToInventory();
+		P_THIS->AddItemToInventory(Z_Param_Obj);
 		P_NATIVE_END;
 	}
 	void AMainGamePlayerController::StaticRegisterNativesAMainGamePlayerController()
@@ -38,17 +40,27 @@ void EmptyLinkFunctionForGeneratedCodeMainGamePlayerController() {}
 	}
 	struct Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics
 	{
+		struct MainGamePlayerController_eventAddItemToInventory_Parms
+		{
+			UObject* Obj;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Obj;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::NewProp_Obj = { "Obj", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MainGamePlayerController_eventAddItemToInventory_Parms, Obj), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::NewProp_Obj,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MainGamePlayerController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainGamePlayerController, nullptr, "AddItemToInventory", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainGamePlayerController, nullptr, "AddItemToInventory", nullptr, nullptr, sizeof(MainGamePlayerController_eventAddItemToInventory_Parms), Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -86,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGamePlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Inventory_Project,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMainGamePlayerController_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory, "AddItemToInventory" }, // 1146688628
+		{ &Z_Construct_UFunction_AMainGamePlayerController_AddItemToInventory, "AddItemToInventory" }, // 956727882
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGamePlayerController_Statics::Class_MetaDataParams[] = {
@@ -142,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGamePlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainGamePlayerController, 377511959);
+	IMPLEMENT_CLASS(AMainGamePlayerController, 90146642);
 	template<> INVENTORY_PROJECT_API UClass* StaticClass<AMainGamePlayerController>()
 	{
 		return AMainGamePlayerController::StaticClass();

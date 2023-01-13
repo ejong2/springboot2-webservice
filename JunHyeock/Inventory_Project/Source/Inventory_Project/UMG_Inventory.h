@@ -4,11 +4,13 @@
 
 
 #include "CoreMinimal.h"
+#include "MyTileView.h"
 #include "UMG_InventoryItem.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
 #include "Components/TileView.h"
+#include "InventoryItemData.h"
 #include "UMG_Inventory.generated.h"
 
 /**
@@ -29,8 +31,11 @@ public:
 
 	void OnButtonClickExample();
 
+	UFUNCTION(BlueprintCallable)
+	void AddItemtoInventory(UObject* Item);
 
-	void AddGainItem();
+	void InventoryClear();
+
 
 
 	UPROPERTY(meta = (BindWidget))
@@ -40,11 +45,20 @@ public:
 	UTextBlock* MYTEXT;
 
 	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
-	UTileView* MyItems;
+	UTileView* MyItemTileView;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UInventoryItemData*> ItemDataArray;
 
 
+	bool bIsNotFounded = true;
+	//struct ItemSlot
+	//{
+	//	int ItemId;
+	//	int ItemCount;
+	//	UInventoryItemData* ItemDataptr;
+	//};
 
 
 	
