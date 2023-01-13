@@ -33,7 +33,13 @@ sql::ResultSet* rs = nullptr;
 
 SOCKET CS;
 
-CRITICAL_SECTION CS_DB_HANDLER;
+struct MessageHeader
+{
+	int MessageID;
+	int MessageSize;
+	int SenderSocketID;
+	int ReceiverSocketID;
+};
 
 void LoginProcess(SOCKET ClientSocket)
 {
@@ -135,32 +141,36 @@ int main()
 
 					FD_SET(CS, &Reads);
 					cout << "CONNECT : " << CS << '\n';
+
+					MessageHeader msgHead = { 0, };
+					msgHead.MessageID = 1;
+					msgHead.MessageSize = sizeof(msgHead);
+					msgHead.SenderSocketID = (int)SS;
+					msgHead.ReceiverSocketID = (int)CS;
+					send(CS, (char*)&msgHead, msgHead.MessageSize, 0);
 				}
 				else
 				{
 					char RecvBuffer[PACKET_SIZE] = { 0, };
 					int RecvBytes = recv(Reads.fd_array[i], RecvBuffer, sizeof(RecvBuffer) - 1, 0);
 
-					string str = RecvBuffer;
+					string strPacket = RecvBuffer;
 
 					// 로그인 처리 함수 실행
-					if (str == "LoginPack")
+					if (strPacket == "LoginPack")
 					{
 						LoginProcess(CS);
-					}
-					
+					}		
 					// Move 처리 함수 실행
-					if (str == "MoveBuffer")
+					if (strPacket == "MoveBuffer")
 					{
 						MoveProcess(CS);
 					}
-
 					// MoveEnd 처리 함수 실행
-					if (str == "EndBuffer")
+					if (strPacket == "EndBuffer")
 					{
 						MoveEndProcess(CS);
 					}
-
 					// 플레이어 종료
 					if (RecvBytes <= 0)
 					{
