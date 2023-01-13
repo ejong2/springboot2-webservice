@@ -28,10 +28,14 @@ public:
 
 	void AttachComponents();
 
-	void GetItem();
+	void ClassSave();
+
+	void SpawnMyLocation();
 
 	//movement
 	void GoForward(float Axis);
 	void GoRight(float Axis);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> MySpawnActor;
 };

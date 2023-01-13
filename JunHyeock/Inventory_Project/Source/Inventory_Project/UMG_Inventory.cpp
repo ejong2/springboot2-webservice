@@ -56,29 +56,29 @@ void UUMG_Inventory::AddItemtoInventory(UObject* Item)
 	//MyItemTileView->AddItem(MyItem);
 
 
-	bIsNotFounded = true;
+
 
 	//==============================================
-	if (ItemDataArray.Num() == 0)
+	//if (ItemDataArray.Num() == 0)
+	//{
+	//	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("FirstItem"));
+	//	MyItem->ItemCount++;
+	//	ItemDataArray.Add(MyItem);
+	//	bIsNotFounded = false;
+	//}
+	//else
+	bIsNotFounded = true;
+	for (UInventoryItemData* DataItr : ItemDataArray)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("FirstItem"));
-		MyItem->ItemCount++;
-		ItemDataArray.Add(MyItem);
-		bIsNotFounded = false;
-	}
-	else
-	{
-		for (UInventoryItemData* DataItr : ItemDataArray)
+		if (MyItem->ItemID == DataItr->ItemID)
 		{
-			if (MyItem->ItemID == DataItr->ItemID)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Found"));
-				//found same itemid
-				DataItr->ItemCount++;
-				bIsNotFounded = false;
-			}
-
+			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Found"));
+			//found same itemid
+			DataItr->ItemCount++;
+			bIsNotFounded = false;
+			break;
 		}
+
 	}
 
 	if (bIsNotFounded)

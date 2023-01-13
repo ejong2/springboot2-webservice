@@ -5,7 +5,6 @@
 
 void UUMG_InventoryItem::NativeConstruct()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Item Constructor"));
 	Super::NativeConstruct();
 	//Background = Cast<UBorder>(GetWidgetFromName(TEXT("ItemBackground")));
 	//NameText = Cast<UTextBlock>(GetWidgetFromName(TEXT("ItemName")));
@@ -14,7 +13,6 @@ void UUMG_InventoryItem::NativeConstruct()
 
 void UUMG_InventoryItem::NativeOnListItemObjectSet(UObject* ListItemObject)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("ObjSet"));
 
 
 	SetData(ListItemObject);

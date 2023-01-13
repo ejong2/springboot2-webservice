@@ -21,10 +21,18 @@ public:
 	~AInventory_ProjectGameModeBase();
 
 
+	void ClassSave();
+
+	void SpawnRandomPoint();
+
+
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaTimes) override;
 
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> MySpawnActor;
 	
 };

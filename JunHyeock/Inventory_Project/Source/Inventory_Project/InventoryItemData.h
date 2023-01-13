@@ -18,6 +18,8 @@ public:
 	FString DataString = TEXT("Hello");
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FLinearColor DataColor = FLinearColor::Blue;
+	
+	UTexture2D* DataImage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int ItemID = 0;

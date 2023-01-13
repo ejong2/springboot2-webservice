@@ -12,6 +12,7 @@ AMainGameCharacter::AMainGameCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	AttachComponents();
+	ClassSave();
 }
 
 // Called when the game starts or when spawned
@@ -19,6 +20,7 @@ void AMainGameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
 }
 
 // Called every frame
@@ -34,6 +36,7 @@ void AMainGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &AMainGameCharacter::GoForward);
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AMainGameCharacter::GoRight);
+//	PlayerInputComponent->BindAction(TEXT("SpawnActor"), IE_Pressed, this, &AMainGameCharacter::SpawnMyLocation);
 
 }
 
@@ -77,9 +80,27 @@ void AMainGameCharacter::AttachComponents()
 
 }
 
-void GetItem()
+void AMainGameCharacter::ClassSave()
 {
-	
+	//if (MySpawnActor == nullptr)
+	//	return;
+
+	static ConstructorHelpers::FObjectFinder<UBlueprint> MyActor(TEXT("Blueprint'/Game/InventoryProject_Blueprints/BP_MyItem.BP_MyItem'"));
+	if (MyActor.Object)
+	{
+		MySpawnActor = (UClass*)MyActor.Object->GeneratedClass;
+	}
+}
+
+void AMainGameCharacter::SpawnMyLocation()
+{
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	FRotator rotator;
+	FVector SpawnLocation = GetActorLocation();
+	SpawnLocation.X += 100.f;
+	GWorld->SpawnActor<AActor>(MySpawnActor, SpawnLocation, rotator, SpawnParams);
+
 }
 
 void AMainGameCharacter::GoForward(float Axis)
