@@ -28,10 +28,17 @@ public:
 	// 선택 시 호출
 	virtual void NativeOnItemSelectionChanged(bool bIsSelected) override;
 	
+
+	void SetData(UObject* ListItemObject);
 private:
 	// UI구성요소
 	UPROPERTY(meta = (BindWidget))
 	UBorder* ItemBackground;
 	UPROPERTY(meta = (BindWidget))
 	UTextBlock* ItemName;
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* ItemCount;
+
+	UObject* CurrentData;
+
 };

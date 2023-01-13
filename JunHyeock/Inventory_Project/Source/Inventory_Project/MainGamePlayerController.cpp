@@ -78,12 +78,12 @@ void AMainGamePlayerController::InventoryToggle()
 	}
 }
 
-void AMainGamePlayerController::AddItemToInventory()
+void AMainGamePlayerController::AddItemToInventory(UObject* Obj)
 {
 	if (InvenWidget == nullptr)
 		return;
 
-	InvenWidget->AddItemtoInventory();
+	InvenWidget->AddItemtoInventory(Obj);
 
 
 }

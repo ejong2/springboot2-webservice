@@ -17,15 +17,18 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 	INVENTORY_PROJECT_API UClass* Z_Construct_UClass_UUMG_Inventory();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Inventory_Project();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTileView_NoRegister();
+	INVENTORY_PROJECT_API UClass* Z_Construct_UClass_UInventoryItemData_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UUMG_Inventory::execAddItemtoInventory)
 	{
+		P_GET_OBJECT(UObject,Z_Param_Item);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddItemtoInventory();
+		P_THIS->AddItemtoInventory(Z_Param_Item);
 		P_NATIVE_END;
 	}
 	void UUMG_Inventory::StaticRegisterNativesUUMG_Inventory()
@@ -38,19 +41,27 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 	}
 	struct Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics
 	{
+		struct UMG_Inventory_eventAddItemtoInventory_Parms
+		{
+			UObject* Item;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Item;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::NewProp_Item = { "Item", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMG_Inventory_eventAddItemtoInventory_Parms, Item), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::NewProp_Item,
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "/*UObject* Item*/" },
 		{ "ModuleRelativePath", "UMG_Inventory.h" },
-		{ "ToolTip", "UObject* Item" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUMG_Inventory, nullptr, "AddItemtoInventory", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUMG_Inventory, nullptr, "AddItemtoInventory", nullptr, nullptr, sizeof(UMG_Inventory_eventAddItemtoInventory_Parms), Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -80,9 +91,14 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MYTEXT;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyItems_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyItemTileView_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyItems;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyItemTileView;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemDataArray_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemDataArray_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ItemDataArray;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -92,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Inventory_Project,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UUMG_Inventory_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory, "AddItemtoInventory" }, // 2826720365
+		{ &Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory, "AddItemtoInventory" }, // 3846897029
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_Inventory_Statics::Class_MetaDataParams[] = {
@@ -119,18 +135,28 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MYTEXT = { "MYTEXT", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_Inventory, MYTEXT), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MYTEXT_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MYTEXT_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItems_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItemTileView_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "UMG_Inventory" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UMG_Inventory.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItems = { "MyItems", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_Inventory, MyItems), Z_Construct_UClass_UTileView_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItems_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItems_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItemTileView = { "MyItemTileView", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_Inventory, MyItemTileView), Z_Construct_UClass_UTileView_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItemTileView_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItemTileView_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray_Inner = { "ItemDataArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UInventoryItemData_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray_MetaData[] = {
+		{ "Category", "UMG_Inventory" },
+		{ "ModuleRelativePath", "UMG_Inventory.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray = { "ItemDataArray", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UUMG_Inventory, ItemDataArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UUMG_Inventory_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ExampleButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MYTEXT,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItems,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_MyItemTileView,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUMG_Inventory_Statics::NewProp_ItemDataArray,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UUMG_Inventory_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UUMG_Inventory>::IsAbstract,
@@ -159,7 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UUMG_Inventory, 3682174383);
+	IMPLEMENT_CLASS(UUMG_Inventory, 4058863392);
 	template<> INVENTORY_PROJECT_API UClass* StaticClass<UUMG_Inventory>()
 	{
 		return UUMG_Inventory::StaticClass();

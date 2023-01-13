@@ -64,7 +64,8 @@ public: \
 
 #define Inventory_Project_Source_Inventory_Project_UMG_InventoryItem_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ItemBackground() { return STRUCT_OFFSET(UUMG_InventoryItem, ItemBackground); } \
-	FORCEINLINE static uint32 __PPO__ItemName() { return STRUCT_OFFSET(UUMG_InventoryItem, ItemName); }
+	FORCEINLINE static uint32 __PPO__ItemName() { return STRUCT_OFFSET(UUMG_InventoryItem, ItemName); } \
+	FORCEINLINE static uint32 __PPO__ItemCount() { return STRUCT_OFFSET(UUMG_InventoryItem, ItemCount); }
 
 
 #define Inventory_Project_Source_Inventory_Project_UMG_InventoryItem_h_16_PROLOG

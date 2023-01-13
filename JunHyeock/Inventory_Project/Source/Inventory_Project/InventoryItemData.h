@@ -9,11 +9,18 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class INVENTORY_PROJECT_API UInventoryItemData : public UObject
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString DataString = TEXT("Hello");
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FLinearColor DataColor = FLinearColor::Blue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int ItemID = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int ItemCount = 0;
 };

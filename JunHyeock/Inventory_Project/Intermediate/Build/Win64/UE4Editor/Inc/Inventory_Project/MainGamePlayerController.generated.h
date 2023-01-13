@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 #ifdef INVENTORY_PROJECT_MainGamePlayerController_generated_h
 #error "MainGamePlayerController.generated.h already included, missing '#pragma once' in MainGamePlayerController.h"
 #endif
