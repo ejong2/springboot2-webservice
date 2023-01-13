@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTenth_TCPConnect_One_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x72269799,
+				0xB8771051,
 				0x67FC6836,
 				METADATA_PARAMS(nullptr, 0)
 			};
