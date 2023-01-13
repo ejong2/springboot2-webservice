@@ -29,8 +29,11 @@ public:
 
 	void OnButtonClickExample();
 
+	UFUNCTION(BlueprintCallable)
+	void AddItemtoInventory(/*UObject* Item*/);
 
-	void AddGainItem();
+	void InventoryClear();
+
 
 
 	UPROPERTY(meta = (BindWidget))

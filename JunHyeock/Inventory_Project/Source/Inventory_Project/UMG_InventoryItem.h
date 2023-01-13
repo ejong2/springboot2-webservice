@@ -30,8 +30,8 @@ public:
 	
 private:
 	// UI구성요소
-	UPROPERTY()
-	UBorder* Background;
-	UPROPERTY()
-	UTextBlock* NameText;
+	UPROPERTY(meta = (BindWidget))
+	UBorder* ItemBackground;
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* ItemName;
 };

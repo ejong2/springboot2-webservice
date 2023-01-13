@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Inventory_Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{51B0FFDD-574F-4E80-BDF0-C22B5A04BC5F}</UniqueIdentifier>
+      <UniqueIdentifier>{60A10005-21E5-443D-8336-4E563287061B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Inventory_Project.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{C3446248-2D24-405D-950A-CB5AAE878D85}</UniqueIdentifier>
+      <UniqueIdentifier>{681DE262-B798-499E-8073-3B7A6A853771}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,12 +27,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Inventory_Project">
-      <UniqueIdentifier>{DB46FB2C-2386-4B8C-B09E-CBF1E77387BB}</UniqueIdentifier>
+      <UniqueIdentifier>{438DF97E-F77E-476D-9257-939DBF4DF704}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Inventory_Project\AItemActor.cpp">
       <Filter>Source\Inventory_Project</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Inventory_Project\AItemActor.h">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Inventory_Project\InventoryItemData.cpp">
+      <Filter>Source\Inventory_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Inventory_Project\InventoryItemData.h">
       <Filter>Source\Inventory_Project</Filter>
     </ClInclude>
     <None Include="..\..\Source\Inventory_Project\Inventory_Project.Build.cs">

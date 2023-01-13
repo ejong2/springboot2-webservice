@@ -21,8 +21,44 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTileView_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UUMG_Inventory::execAddItemtoInventory)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddItemtoInventory();
+		P_NATIVE_END;
+	}
 	void UUMG_Inventory::StaticRegisterNativesUUMG_Inventory()
 	{
+		UClass* Class = UUMG_Inventory::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "AddItemtoInventory", &UUMG_Inventory::execAddItemtoInventory },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*UObject* Item*/" },
+		{ "ModuleRelativePath", "UMG_Inventory.h" },
+		{ "ToolTip", "UObject* Item" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUMG_Inventory, nullptr, "AddItemtoInventory", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UUMG_Inventory_NoRegister()
 	{
@@ -31,6 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 	struct Z_Construct_UClass_UUMG_Inventory_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -53,6 +90,9 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 	UObject* (*const Z_Construct_UClass_UUMG_Inventory_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UUserWidget,
 		(UObject* (*)())Z_Construct_UPackage__Script_Inventory_Project,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UUMG_Inventory_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UUMG_Inventory_AddItemtoInventory, "AddItemtoInventory" }, // 2826720365
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUMG_Inventory_Statics::Class_MetaDataParams[] = {
@@ -100,11 +140,11 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UUMG_Inventory_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UUMG_Inventory_Statics::PropPointers),
 		0,
 		0x00B010A0u,
@@ -119,7 +159,7 @@ void EmptyLinkFunctionForGeneratedCodeUMG_Inventory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UUMG_Inventory, 2667255607);
+	IMPLEMENT_CLASS(UUMG_Inventory, 3682174383);
 	template<> INVENTORY_PROJECT_API UClass* StaticClass<UUMG_Inventory>()
 	{
 		return UUMG_Inventory::StaticClass();
