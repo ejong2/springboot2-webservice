@@ -1,4 +1,4 @@
-package StudyPackage.Camera;
+package ClassStudyPackage.Camera;
 
 public class FactoryCam extends Camera{   // 자식 클래스
 

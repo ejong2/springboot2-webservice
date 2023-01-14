@@ -1,4 +1,4 @@
-package StudyPackage;
+package ClassStudyPackage;
 public class AccessModifier {
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package StudyPackage.Camera;
+package ClassStudyPackage.Camera;
 
 public class Super {
     public static void main(String[] args) {

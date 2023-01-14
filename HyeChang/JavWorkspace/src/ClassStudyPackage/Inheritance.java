@@ -1,8 +1,8 @@
-package StudyPackage;
+package ClassStudyPackage;
 
-import StudyPackage.Camera.Camera;
-import StudyPackage.Camera.FactoryCam;
-import StudyPackage.Camera.SpeedCam;
+import ClassStudyPackage.Camera.Camera;
+import ClassStudyPackage.Camera.FactoryCam;
+import ClassStudyPackage.Camera.SpeedCam;
 
 public class Inheritance {
     public static void main(String[] args) {

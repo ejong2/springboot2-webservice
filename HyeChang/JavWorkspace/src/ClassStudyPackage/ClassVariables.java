@@ -1,6 +1,4 @@
-package StudyPackage;
-
-import java.util.Stack;
+package ClassStudyPackage;
 
 public class ClassVariables {
     public static void main(String[] args) {

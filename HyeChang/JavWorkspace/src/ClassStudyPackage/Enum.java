@@ -1,6 +1,4 @@
-package StudyPackage;
-
-import java.util.ResourceBundle;
+package ClassStudyPackage;
 
 public class Enum {
     public static void main(String[] args) {

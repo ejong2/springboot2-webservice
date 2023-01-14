@@ -1,4 +1,4 @@
-package StudyPackage;
+package ClassStudyPackage;
 public class BlackBox {
     String modelName;
     String resolution;

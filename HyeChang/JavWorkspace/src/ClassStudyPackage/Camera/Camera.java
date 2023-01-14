@@ -1,4 +1,4 @@
-package StudyPackage.Camera;
+package ClassStudyPackage.Camera;
 
 public class Camera {
     public String name;

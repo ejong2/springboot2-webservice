@@ -1,6 +1,6 @@
-package StudyPackage;
+package ClassStudyPackage;
 
-import StudyPackage.Camera.Camera;
+import ClassStudyPackage.Camera.Camera;
 
 public class Reference {
     public static void main(String[] args) {

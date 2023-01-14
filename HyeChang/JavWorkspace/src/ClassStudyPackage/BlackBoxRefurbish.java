@@ -1,4 +1,4 @@
-package StudyPackage;
+package ClassStudyPackage;
 public class BlackBoxRefurbish {
     public String modelName;
     String resolution;

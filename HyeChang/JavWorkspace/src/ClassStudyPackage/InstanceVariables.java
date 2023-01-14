@@ -1,4 +1,4 @@
-package StudyPackage;
+package ClassStudyPackage;
 public class InstanceVariables {
     public static void main(String[] args) {
 

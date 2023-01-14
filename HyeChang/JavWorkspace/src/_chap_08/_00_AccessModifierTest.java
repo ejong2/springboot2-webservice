@@ -1,9 +1,6 @@
 package _chap_08;
 
-import StudyPackage.*;
-
-import StudyPackage.BlackBox;
-import StudyPackage.BlackBoxRefurbish;
+import ClassStudyPackage.BlackBoxRefurbish;
 
 public class _00_AccessModifierTest {
     public static void main(String[] args) {
