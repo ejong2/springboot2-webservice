@@ -16,6 +16,7 @@ public class _01_Generics {
         printAnyArray(sArray);
 
     }
+    // 제네릭스 공부
     // T : Type
     public static <T> void printAnyArray(T[] Array){
         for(T t : Array){
