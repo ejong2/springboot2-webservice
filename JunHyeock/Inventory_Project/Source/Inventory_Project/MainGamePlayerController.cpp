@@ -72,7 +72,10 @@ void AMainGamePlayerController::CreateMaingameWidget()
 		{
 			Hudlayout->AddToViewport();
 			bShowMouseCursor = true;
+			InvenWidget = Hudlayout->Inventory;
 		}
+
+
 	}
 
 }

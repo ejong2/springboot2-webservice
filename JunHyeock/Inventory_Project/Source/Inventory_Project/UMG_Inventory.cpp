@@ -61,9 +61,6 @@ FReply UUMG_Inventory::CustomDetectDrag(const FPointerEvent& InMouseEvent, UWidg
 	return FReply::Unhandled();
 }
 
-
-
-
 FReply UUMG_Inventory::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent)
 {
 	Super::NativeOnMouseButtonDown(InGeometry, InMouseEvent);
