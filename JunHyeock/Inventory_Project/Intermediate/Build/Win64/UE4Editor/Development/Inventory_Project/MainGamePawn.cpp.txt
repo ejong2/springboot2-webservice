@@ -171,5 +171,9 @@ F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitC
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
 F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\AssetRegistry/ARFilter.h
 C:\Users\82102\Desktop\ivp\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\InventoryItemData.generated.h
+C:\Users\82102\Desktop\ivp\Tenth_Student_Project\JunHyeock\Inventory_Project\Source\Inventory_Project\DragWidget.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/DragDropOperation.h
+F:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DragDropOperation.generated.h
+C:\Users\82102\Desktop\ivp\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\DragWidget.generated.h
 C:\Users\82102\Desktop\ivp\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\UMG_Inventory.generated.h
 C:\Users\82102\Desktop\ivp\Tenth_Student_Project\JunHyeock\Inventory_Project\Intermediate\Build\Win64\UE4Editor\Inc\Inventory_Project\MainGamePawn.generated.h

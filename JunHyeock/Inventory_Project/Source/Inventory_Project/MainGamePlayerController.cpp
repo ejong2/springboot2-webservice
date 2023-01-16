@@ -53,15 +53,25 @@ void AMainGamePlayerController::CreateMaingameWidget()
 {
 	if (IsValid(WidgetClass))
 	{
-		InvenWidget = Cast<UUMG_Inventory>(CreateWidget(GetWorld(), WidgetClass));
-		InvenWidget->MYTEXT->SetText(FText::FromString(ItemTagText));
+		//InvenWidget = Cast<UUMG_Inventory>(CreateWidget(GetWorld(), WidgetClass));
+		//InvenWidget->MYTEXT->SetText(FText::FromString(ItemTagText));
 
-		if (InvenWidget != nullptr)
+		Hudlayout = Cast<UHUDLayout>(CreateWidget(GetWorld(), WidgetClass));
+		
+
+
+		//if (InvenWidget != nullptr)
+		//{
+		//	InvenWidget->AddToViewport(); 
+
+		//	//Widget contstructor Set
+		//	InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+		//}
+
+		if (Hudlayout != nullptr)
 		{
-			InvenWidget->AddToViewport(); 
-
-			//Widget contstructor Set
-			InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+			Hudlayout->AddToViewport();
+			bShowMouseCursor = true;
 		}
 	}
 
@@ -75,11 +85,13 @@ void AMainGamePlayerController::InventoryToggle()
 	if (InvenWidget->GetVisibility() == ESlateVisibility::Collapsed)
 	{
 		InvenWidget->SetVisibility(ESlateVisibility::Visible);
+		bShowMouseCursor = true;
 	}
 
 	else if (InvenWidget->GetVisibility() == ESlateVisibility::Visible)
 	{
 		InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+		bShowMouseCursor = false;
 	}
 }
 
