@@ -34,6 +34,9 @@ void AMainGamePlayerController::SetupInputComponent()
 	InputComponent->BindAction(TEXT("ZButton"), IE_Pressed, this, &AMainGamePlayerController::ItemLeftToCenter);
 	InputComponent->BindAction(TEXT("XButton"), IE_Pressed, this, &AMainGamePlayerController::ItemCenterToLeft);
 
+	InputComponent->BindAction(TEXT("CButton"), IE_Pressed, this, &AMainGamePlayerController::OneItemLeftToCenter);
+	InputComponent->BindAction(TEXT("VButton"), IE_Pressed, this, &AMainGamePlayerController::OneItemCenterToLeft);
+
 }
 
 void AMainGamePlayerController::MoveForward(float Axis)
@@ -108,3 +111,14 @@ void AMainGamePlayerController::ItemCenterToLeft()
 	InvenWidget->PopItemCenterToLeft();
 	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("X"));
 }
+
+void AMainGamePlayerController::OneItemLeftToCenter()
+{
+	InvenWidget->OneItemLeftToCenter();
+}
+
+void AMainGamePlayerController::OneItemCenterToLeft()
+{
+	InvenWidget->OneItemCenterToLeft();
+}
+

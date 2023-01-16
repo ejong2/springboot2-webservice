@@ -176,4 +176,101 @@ void UUMG_Inventory::PopItemCenterToLeft()
 	MyItemTileViewCenter->ClearListItems();
 	MyItemTileViewCenter->RequestRefresh();
 
+
+}
+
+void UUMG_Inventory::OneItemLeftToCenter()
+{
+	if (ItemDataArray.Num() <= 0)
+		return;
+
+	if (ItemDataArray.Last()->ItemCount > 1)
+	{
+		UInventoryItemData* OneItem = NewObject<UInventoryItemData>();
+
+		OneItem->ItemCount = 1;
+		OneItem->ItemID = (ItemDataArray.Last())->ItemID;
+		OneItem->DataColor = ItemDataArray.Last()->DataColor;
+		OneItem->DataString = ItemDataArray.Last()->DataString;
+
+		AddItemToCenter(OneItem);
+
+
+		ItemDataArray.Last()->ItemCount -= 1;
+
+
+	}
+	else if (ItemDataArray.Last()->ItemCount == 1)
+	{
+		UInventoryItemData* OneItem = NewObject<UInventoryItemData>();
+
+		OneItem->ItemCount = 1;
+		OneItem->ItemID = (ItemDataArray.Last())->ItemID;
+		OneItem->DataColor = ItemDataArray.Last()->DataColor;
+		OneItem->DataString = ItemDataArray.Last()->DataString;
+		AddItemToCenter(OneItem);
+
+		ItemDataArray.Pop();
+
+		//
+		MyItemTileView->ClearListItems();
+		MyItemTileView->RequestRefresh();
+		
+	}
+
+
+
+	
+	MyItemTileView->RegenerateAllEntries();
+
+
+
+
+
+	
+	
+}
+
+void UUMG_Inventory::OneItemCenterToLeft()
+{
+	if (ItemDataArraySecond.Num() <= 0)
+		return;
+
+
+	if (ItemDataArraySecond.Last()->ItemCount > 1)
+	{
+		UInventoryItemData* OneItem = NewObject<UInventoryItemData>();
+		OneItem->ItemCount = 1;
+		OneItem->ItemID = ItemDataArraySecond.Last()->ItemID;
+		OneItem->DataColor = ItemDataArraySecond.Last()->DataColor;
+		OneItem->DataString = ItemDataArraySecond.Last()->DataString;
+
+		AddItemtoInventory(OneItem);
+
+
+		ItemDataArraySecond.Last()->ItemCount -= 1;
+	}
+	else if (ItemDataArraySecond.Last()->ItemCount == 1)
+	{
+		UInventoryItemData* OneItem = NewObject<UInventoryItemData>();
+		OneItem->ItemCount = 1;
+		OneItem->ItemID = ItemDataArraySecond.Last()->ItemID;
+		OneItem->DataColor = ItemDataArraySecond.Last()->DataColor;
+		OneItem->DataString = ItemDataArraySecond.Last()->DataString;
+
+		AddItemtoInventory(OneItem);
+
+		ItemDataArraySecond.Pop();
+
+		MyItemTileViewCenter->ClearListItems();
+		MyItemTileViewCenter->RequestRefresh();
+	}
+
+
+
+
+	MyItemTileViewCenter->RegenerateAllEntries();
+
+
+
 }

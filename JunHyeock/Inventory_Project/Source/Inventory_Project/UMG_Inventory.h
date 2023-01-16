@@ -40,6 +40,8 @@ public:
 	void PopItemLeftToCenter();
 	void PopItemCenterToLeft();
 
+	void OneItemLeftToCenter();
+	void OneItemCenterToLeft();
 	
 
 	UPROPERTY(meta = (BindWidget))

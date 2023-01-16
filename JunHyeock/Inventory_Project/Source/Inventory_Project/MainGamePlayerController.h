@@ -39,6 +39,8 @@ public:
 	void ItemLeftToCenter();
 	void ItemCenterToLeft();
 
+	void OneItemLeftToCenter();
+	void OneItemCenterToLeft();
 
 
 
