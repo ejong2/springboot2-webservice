@@ -11,6 +11,7 @@
 #include "Components/Button.h"
 #include "Components/TileView.h"
 #include "InventoryItemData.h"
+#include "DragWidget.h"
 #include "UMG_Inventory.generated.h"
 
 /**
@@ -29,14 +30,32 @@ public:
 
 	virtual void NativeConstruct() override;
 
+	FReply CustomDetectDrag(const FPointerEvent& InMouseEvent, UWidget* WidgetDetectingDrag, FKey DragKey);
+
+	virtual FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
+	virtual void NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation) override;
+	virtual void NativeOnDragLeave(const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation) override;
+
+
+
+
+	virtual void NativeOnInitialized() override;
+
+
 	void OnButtonClickExample();
 
 	UFUNCTION(BlueprintCallable)
 	void AddItemtoInventory(UObject* Item);
 
-	void InventoryClear();
+	UFUNCTION(BlueprintCallable)
+	void AddItemToCenter(UObject* Item);
 
+	void PopItemLeftToCenter();
+	void PopItemCenterToLeft();
 
+	void OneItemLeftToCenter();
+	void OneItemCenterToLeft();
+	
 
 	UPROPERTY(meta = (BindWidget))
 	UButton* ExampleButton;
@@ -47,10 +66,15 @@ public:
 	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
 	UTileView* MyItemTileView;
 
+	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
+	UTileView* MyItemTileViewCenter;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<UInventoryItemData*> ItemDataArray;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UInventoryItemData*> ItemDataArraySecond;
 
 	bool bIsNotFounded = true;
 	//struct ItemSlot
@@ -60,6 +84,6 @@ public:
 	//	UInventoryItemData* ItemDataptr;
 	//};
 
-
+	
 	
 };

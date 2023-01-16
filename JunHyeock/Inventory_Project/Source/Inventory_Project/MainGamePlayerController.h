@@ -2,6 +2,7 @@
 
 #pragma once
 #include "UMG_Inventory.h"
+#include "HUDLayout.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "MainGamePlayerController.generated.h"
@@ -36,6 +37,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AddItemToInventory(UObject* Obj);
 
+	void ItemLeftToCenter();
+	void ItemCenterToLeft();
+
+	void OneItemLeftToCenter();
+	void OneItemCenterToLeft();
 
 
 
@@ -46,6 +52,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UUMG_Inventory* InvenWidget = nullptr;
+
+	UHUDLayout* Hudlayout = nullptr;
 
 	FString ItemTagText = TEXT("TEXT Sample");
 

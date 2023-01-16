@@ -43,7 +43,6 @@ void AMainGamePawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &AMainGamePawn::GoForward);
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AMainGamePawn::GoRight);
-
 }
 
 void AMainGamePawn::InitComponents()
@@ -85,6 +84,7 @@ void AMainGamePawn::InitComponents()
 
 
 }
+
 
 void AMainGamePawn::GoForward(float Axis)
 {

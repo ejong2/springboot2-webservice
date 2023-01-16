@@ -31,6 +31,11 @@ void AMainGamePlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 	InputComponent->BindAction(TEXT("InventoryToggle"), IE_Pressed, this, &AMainGamePlayerController::InventoryToggle);
+	InputComponent->BindAction(TEXT("ZButton"), IE_Pressed, this, &AMainGamePlayerController::ItemLeftToCenter);
+	InputComponent->BindAction(TEXT("XButton"), IE_Pressed, this, &AMainGamePlayerController::ItemCenterToLeft);
+
+	InputComponent->BindAction(TEXT("CButton"), IE_Pressed, this, &AMainGamePlayerController::OneItemLeftToCenter);
+	InputComponent->BindAction(TEXT("VButton"), IE_Pressed, this, &AMainGamePlayerController::OneItemCenterToLeft);
 
 }
 
@@ -48,16 +53,29 @@ void AMainGamePlayerController::CreateMaingameWidget()
 {
 	if (IsValid(WidgetClass))
 	{
-		InvenWidget = Cast<UUMG_Inventory>(CreateWidget(GetWorld(), WidgetClass));
-		InvenWidget->MYTEXT->SetText(FText::FromString(ItemTagText));
+		//InvenWidget = Cast<UUMG_Inventory>(CreateWidget(GetWorld(), WidgetClass));
+		//InvenWidget->MYTEXT->SetText(FText::FromString(ItemTagText));
 
-		if (InvenWidget != nullptr)
+		Hudlayout = Cast<UHUDLayout>(CreateWidget(GetWorld(), WidgetClass));
+		
+
+
+		//if (InvenWidget != nullptr)
+		//{
+		//	InvenWidget->AddToViewport(); 
+
+		//	//Widget contstructor Set
+		//	InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+		//}
+
+		if (Hudlayout != nullptr)
 		{
-			InvenWidget->AddToViewport(); 
-
-			//Widget contstructor Set
-			InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+			Hudlayout->AddToViewport();
+			bShowMouseCursor = true;
+			InvenWidget = Hudlayout->Inventory;
 		}
+
+
 	}
 
 }
@@ -70,11 +88,13 @@ void AMainGamePlayerController::InventoryToggle()
 	if (InvenWidget->GetVisibility() == ESlateVisibility::Collapsed)
 	{
 		InvenWidget->SetVisibility(ESlateVisibility::Visible);
+		bShowMouseCursor = true;
 	}
 
 	else if (InvenWidget->GetVisibility() == ESlateVisibility::Visible)
 	{
 		InvenWidget->SetVisibility(ESlateVisibility::Collapsed);
+		bShowMouseCursor = false;
 	}
 }
 
@@ -87,3 +107,33 @@ void AMainGamePlayerController::AddItemToInventory(UObject* Obj)
 
 
 }
+
+void AMainGamePlayerController::ItemLeftToCenter()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	InvenWidget->PopItemLeftToCenter();
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Z"));
+}
+
+
+void AMainGamePlayerController::ItemCenterToLeft()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	InvenWidget->PopItemCenterToLeft();
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("X"));
+}
+
+void AMainGamePlayerController::OneItemLeftToCenter()
+{
+	InvenWidget->OneItemLeftToCenter();
+}
+
+void AMainGamePlayerController::OneItemCenterToLeft()
+{
+	InvenWidget->OneItemCenterToLeft();
+}
+

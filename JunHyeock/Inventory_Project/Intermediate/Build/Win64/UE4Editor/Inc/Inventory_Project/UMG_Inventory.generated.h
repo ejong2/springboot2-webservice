@@ -14,18 +14,20 @@ class UObject;
 #endif
 #define INVENTORY_PROJECT_UMG_Inventory_generated_h
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_SPARSE_DATA
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_SPARSE_DATA
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAddItemToCenter); \
 	DECLARE_FUNCTION(execAddItemtoInventory);
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddItemToCenter); \
 	DECLARE_FUNCTION(execAddItemtoInventory);
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_INCLASS_NO_PURE_DECLS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUUMG_Inventory(); \
 	friend struct Z_Construct_UClass_UUMG_Inventory_Statics; \
@@ -34,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UUMG_Inventory)
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_INCLASS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesUUMG_Inventory(); \
 	friend struct Z_Construct_UClass_UUMG_Inventory_Statics; \
@@ -43,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(UUMG_Inventory)
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_STANDARD_CONSTRUCTORS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UUMG_Inventory(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UUMG_Inventory) \
@@ -56,7 +58,7 @@ private: \
 public:
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_ENHANCED_CONSTRUCTORS \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UUMG_Inventory(UUMG_Inventory&&); \
@@ -67,28 +69,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UUMG_Inventory)
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_PRIVATE_PROPERTY_OFFSET
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_19_PROLOG
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_GENERATED_BODY_LEGACY \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_PRIVATE_PROPERTY_OFFSET
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_20_PROLOG
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_PRIVATE_PROPERTY_OFFSET \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_SPARSE_DATA \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_INCLASS \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_STANDARD_CONSTRUCTORS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_PRIVATE_PROPERTY_OFFSET \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_SPARSE_DATA \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_RPC_WRAPPERS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_INCLASS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_GENERATED_BODY \
+#define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_PRIVATE_PROPERTY_OFFSET \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_SPARSE_DATA \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_INCLASS_NO_PURE_DECLS \
-	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_ENHANCED_CONSTRUCTORS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_PRIVATE_PROPERTY_OFFSET \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_SPARSE_DATA \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_INCLASS_NO_PURE_DECLS \
+	Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

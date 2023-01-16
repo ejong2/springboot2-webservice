@@ -29,6 +29,8 @@ public:
 
 	void InitComponents();
 
+	void ItemLeftToCenter();
+
 	//movement
 	void GoForward(float Axis);
 	void GoRight(float Axis);

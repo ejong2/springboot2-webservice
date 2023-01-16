@@ -19,4 +19,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector2D DragOffset;
+
+
+
 };
