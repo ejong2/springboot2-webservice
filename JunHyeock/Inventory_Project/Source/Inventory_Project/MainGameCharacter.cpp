@@ -38,6 +38,7 @@ void AMainGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AMainGameCharacter::GoRight);
 //	PlayerInputComponent->BindAction(TEXT("SpawnActor"), IE_Pressed, this, &AMainGameCharacter::SpawnMyLocation);
 
+
 }
 
 
@@ -102,6 +103,7 @@ void AMainGameCharacter::SpawnMyLocation()
 	GWorld->SpawnActor<AActor>(MySpawnActor, SpawnLocation, rotator, SpawnParams);
 
 }
+
 
 void AMainGameCharacter::GoForward(float Axis)
 {

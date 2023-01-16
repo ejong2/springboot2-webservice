@@ -31,6 +31,8 @@ void AMainGamePlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 	InputComponent->BindAction(TEXT("InventoryToggle"), IE_Pressed, this, &AMainGamePlayerController::InventoryToggle);
+	InputComponent->BindAction(TEXT("ZButton"), IE_Pressed, this, &AMainGamePlayerController::ItemLeftToCenter);
+	InputComponent->BindAction(TEXT("XButton"), IE_Pressed, this, &AMainGamePlayerController::ItemCenterToLeft);
 
 }
 
@@ -86,4 +88,23 @@ void AMainGamePlayerController::AddItemToInventory(UObject* Obj)
 	InvenWidget->AddItemtoInventory(Obj);
 
 
+}
+
+void AMainGamePlayerController::ItemLeftToCenter()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	InvenWidget->PopItemLeftToCenter();
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Z"));
+}
+
+
+void AMainGamePlayerController::ItemCenterToLeft()
+{
+	if (InvenWidget == nullptr)
+		return;
+
+	InvenWidget->PopItemCenterToLeft();
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("X"));
 }

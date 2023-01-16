@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Inventory_Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{E535ADE9-E261-4510-8C0D-C61291ABBE7B}</UniqueIdentifier>
+      <UniqueIdentifier>{898798CF-1C6C-4351-8AFD-378AD3535486}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Inventory_Project.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{095AD8DE-944B-4DF5-89A6-6BDB7D389695}</UniqueIdentifier>
+      <UniqueIdentifier>{7F6CC495-F5ED-4E59-AF3C-0D76A030D106}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Inventory_Project">
-      <UniqueIdentifier>{63D8CDCF-955A-409F-96DE-A8695A4EE2E4}</UniqueIdentifier>
+      <UniqueIdentifier>{864F0647-56B8-4B9B-A58A-52271896CBD2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Inventory_Project\AItemActor.cpp">
       <Filter>Source\Inventory_Project</Filter>

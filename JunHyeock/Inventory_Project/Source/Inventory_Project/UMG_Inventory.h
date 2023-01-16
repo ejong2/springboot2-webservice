@@ -34,9 +34,13 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AddItemtoInventory(UObject* Item);
 
-	void InventoryClear();
+	UFUNCTION(BlueprintCallable)
+	void AddItemToCenter(UObject* Item);
 
+	void PopItemLeftToCenter();
+	void PopItemCenterToLeft();
 
+	
 
 	UPROPERTY(meta = (BindWidget))
 	UButton* ExampleButton;
@@ -47,10 +51,15 @@ public:
 	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
 	UTileView* MyItemTileView;
 
+	UPROPERTY(meta = (BindWidget), EditAnywhere, BlueprintReadWrite)
+	UTileView* MyItemTileViewCenter;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<UInventoryItemData*> ItemDataArray;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UInventoryItemData*> ItemDataArraySecond;
 
 	bool bIsNotFounded = true;
 	//struct ItemSlot
@@ -60,6 +69,6 @@ public:
 	//	UInventoryItemData* ItemDataptr;
 	//};
 
-
+	
 	
 };

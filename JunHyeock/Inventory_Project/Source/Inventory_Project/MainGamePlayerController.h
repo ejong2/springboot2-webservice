@@ -36,6 +36,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AddItemToInventory(UObject* Obj);
 
+	void ItemLeftToCenter();
+	void ItemCenterToLeft();
+
 
 
 

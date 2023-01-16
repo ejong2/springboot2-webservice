@@ -32,6 +32,7 @@ public:
 
 	void SpawnMyLocation();
 
+
 	//movement
 	void GoForward(float Axis);
 	void GoRight(float Axis);

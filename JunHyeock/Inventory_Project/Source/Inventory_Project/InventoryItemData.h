@@ -24,5 +24,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int ItemID = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int ItemCount = 0;
+	int ItemCount = 1;
+
 };

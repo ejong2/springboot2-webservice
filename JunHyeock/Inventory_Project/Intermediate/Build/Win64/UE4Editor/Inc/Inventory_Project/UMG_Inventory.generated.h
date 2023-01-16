@@ -17,11 +17,13 @@ class UObject;
 #define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_SPARSE_DATA
 #define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAddItemToCenter); \
 	DECLARE_FUNCTION(execAddItemtoInventory);
 
 
 #define Inventory_Project_Source_Inventory_Project_UMG_Inventory_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddItemToCenter); \
 	DECLARE_FUNCTION(execAddItemtoInventory);
 
 

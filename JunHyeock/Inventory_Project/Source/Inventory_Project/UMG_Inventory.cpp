@@ -45,13 +45,11 @@ void UUMG_Inventory::OnButtonClickExample()
 void UUMG_Inventory::AddItemtoInventory(UObject* Item)
 {
 	if (MyItemTileView == nullptr)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Itemlist is null"));
 		return;
-	}
 
 	//it must be parameter. testing now
 	//UInventoryItemData* MyItem = NewObject<UInventoryItemData>(this);
+
 	UInventoryItemData* MyItem = Cast<UInventoryItemData>(Item);
 	//MyItemTileView->AddItem(MyItem);
 
@@ -74,7 +72,7 @@ void UUMG_Inventory::AddItemtoInventory(UObject* Item)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Found"));
 			//found same itemid
-			DataItr->ItemCount++;
+			DataItr->ItemCount += MyItem->ItemCount;
 			bIsNotFounded = false;
 			break;
 		}
@@ -86,7 +84,7 @@ void UUMG_Inventory::AddItemtoInventory(UObject* Item)
 		//'다른것만있을때'
 		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("NotFound"));
 
-		MyItem->ItemCount++;
+		//MyItem->ItemCount++;
 		ItemDataArray.Add(MyItem);
 	}
 
@@ -105,5 +103,77 @@ void UUMG_Inventory::AddItemtoInventory(UObject* Item)
 
 	//MyItems->AddItem();
 
+
+
+
+}
+
+void UUMG_Inventory::AddItemToCenter(UObject* Item)
+{
+	if (MyItemTileViewCenter == nullptr)
+		return;
+
+
+	UInventoryItemData* MyItem = Cast<UInventoryItemData>(Item);
+
+
+
+
+	//==============================================
 	
+	bIsNotFounded = true;
+	for (UInventoryItemData* DataItr : ItemDataArraySecond)
+	{
+		if (MyItem->ItemID == DataItr->ItemID)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("Found Second"));
+			//found same itemid 
+			DataItr->ItemCount += MyItem->ItemCount;
+			bIsNotFounded = false;
+			break;
+		}
+
+	}
+
+	if (bIsNotFounded)
+	{
+		//'다른것만있을때'
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Blue, TEXT("NotFound Second"));
+
+		//MyItem->ItemCount++;
+		ItemDataArraySecond.Add(MyItem);
+	}
+
+	MyItemTileViewCenter->SetListItems(ItemDataArraySecond);
+	MyItemTileViewCenter->RegenerateAllEntries();
+
+
+
+
+
+}
+
+void UUMG_Inventory::PopItemLeftToCenter()
+{
+	if (ItemDataArray.Num() <= 0)
+		return;
+
+	AddItemToCenter(ItemDataArray.Pop());
+
+
+	MyItemTileView->ClearListItems();
+	MyItemTileView->RequestRefresh();
+}
+
+void UUMG_Inventory::PopItemCenterToLeft()
+{
+	if (ItemDataArraySecond.Num() <= 0)
+		return;
+
+	AddItemtoInventory(ItemDataArraySecond.Pop());
+
+	//Remove Refresh
+	MyItemTileViewCenter->ClearListItems();
+	MyItemTileViewCenter->RequestRefresh();
+
 }
