@@ -600,4 +600,6 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
+application-oauth.properties
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unrealengine,intellij
